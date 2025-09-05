@@ -12,7 +12,7 @@ import {
 
 const ReviewsSection = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const reviewsPerPage = 6;
+  const reviewsPerPage = 4;
 
   const allReviews = [
     {
@@ -74,66 +74,6 @@ const ReviewsSection = () => {
       helpful: 312,
       title: "My cardiologist was so impressed, he wrote down the name.",
       content: "As a former engineer, I was intrigued by Dr. Weil's logical explanation of the lymphatic system but remained a healthy skeptic. I decided to give this a proper 90-day trial, tracking my progress. The change wasn't overnight, but it was undeniable. Week by week, the 'water-logged' feeling in my calves lessened. The skin felt softer, less stretched. At my last check-up, my cardiologist—who had previously just told me to 'wear my socks and cut down on salt'—was visibly impressed by the reduction in fluid. He asked what I was doing differently, and after I explained Dr. Weil's approach to clearing the 'lymphatic swamp,' he took down the name of the product for his own research. That's all the proof I need. I've already ordered another six bottles to make sure I never run out."
-    },
-    {
-      id: 7,
-      author: "Patricia W.",
-      rating: 5,
-      date: "3 days ago",
-      verified: true,
-      helpful: 78,
-      title: "Walking without pain for the first time in years",
-      content: "The constant throbbing pain in my legs is gone. I can walk around the block without having to stop and rest. My husband says I look 10 years younger because I'm not grimacing in pain all the time."
-    },
-    {
-      id: 8,
-      author: "Michael B.",
-      rating: 5,
-      date: "1 week ago",
-      verified: true,
-      helpful: 92,
-      title: "The puffiness in my face disappeared too!",
-      content: "I bought this for my swollen legs, but the unexpected bonus was that the puffiness in my face went away too. I look healthier and more alert. People keep asking if I've lost weight!"
-    },
-    {
-      id: 9,
-      author: "Linda K.",
-      rating: 5,
-      date: "2 weeks ago",
-      verified: true,
-      helpful: 145,
-      title: "No more compression socks!",
-      content: "After 8 years of wearing those awful compression socks every single day, I haven't worn them once in the past month. The relief is incredible. My legs feel normal again."
-    },
-    {
-      id: 10,
-      author: "Thomas R.",
-      rating: 5,
-      date: "4 days ago",
-      verified: true,
-      helpful: 56,
-      title: "Energy levels through the roof",
-      content: "Not only is the swelling gone, but I have so much more energy. I think my body was working overtime dealing with all that fluid. Now I feel 20 years younger!"
-    },
-    {
-      id: 11,
-      author: "Barbara G.",
-      rating: 5,
-      date: "1 month ago",
-      verified: true,
-      helpful: 189,
-      title: "My doctor asked what I was doing differently",
-      content: "At my last appointment, my doctor was shocked. She said the improvement in my lymphedema was remarkable. When I told her about this supplement, she said 'Whatever you're doing, keep doing it!'"
-    },
-    {
-      id: 12,
-      author: "James P.",
-      rating: 5,
-      date: "2 weeks ago",
-      verified: true,
-      helpful: 101,
-      title: "Finally found what works",
-      content: "I've tried everything - massage, elevation, every supplement under the sun. This is the only thing that has actually made a real, lasting difference. Worth every penny."
     }
   ];
 
@@ -160,13 +100,13 @@ const ReviewsSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-4xl mx-auto">
           {currentReviews.map((review) => (
             <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
               <div className="space-y-3">
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="font-semibold">{review.author}</p>
+                    <p className="font-semibold text-lg">{review.author}</p>
                     <div className="flex items-center gap-2 mt-1">
                       {review.verified && (
                         <span className="flex items-center gap-1 text-xs text-green-600">
@@ -181,20 +121,20 @@ const ReviewsSection = () => {
                   </div>
                   <div className="flex gap-0.5">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                      <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
                     ))}
                   </div>
                 </div>
 
-                <h4 className="font-bold">{review.title}</h4>
+                <h4 className="font-bold text-lg">{review.title}</h4>
                 
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {review.content}
                 </p>
 
                 <div className="flex items-center gap-2 pt-2">
-                  <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-                    <ThumbsUp className="h-3 w-3" />
+                  <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                    <ThumbsUp className="h-4 w-4" />
                     Helpful ({review.helpful})
                   </button>
                 </div>
