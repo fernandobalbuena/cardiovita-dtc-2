@@ -88,8 +88,8 @@ const IngredientsSection = () => {
             </div>
             <div className="text-center">
               <img
-                src="/supplement-facts.png"
-                alt="Supplement Facts"
+                src="/lovable-uploads/96dbcdd0-c5f1-409f-a392-3c679c641a2a.png"
+                alt="Cardiovita founders holding product"
                 className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
               />
             </div>
