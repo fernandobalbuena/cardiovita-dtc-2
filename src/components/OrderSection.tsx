@@ -19,7 +19,6 @@ interface PackageOption {
 
 const OrderSection = () => {
   const [selectedPackage, setSelectedPackage] = useState("6");
-  const [subscribeAndSave, setSubscribeAndSave] = useState(false);
 
   const packages: PackageOption[] = [
     {
@@ -69,10 +68,10 @@ const OrderSection = () => {
         </h1>
 
         {/* 3 Boxes Layout */}
-        <div className="grid lg:grid-cols-[300px_1fr_300px] gap-4 max-w-7xl mx-auto">
+        <div className="flex justify-center gap-4 max-w-6xl mx-auto">
           
           {/* Left Box - Guarantee */}
-          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden">
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-[280px]">
             <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
               <h3 className="text-lg font-bold">100% SATISFACTION GUARANTEE</h3>
             </div>
@@ -92,7 +91,7 @@ const OrderSection = () => {
           </div>
 
           {/* Center Box - Package Selection */}
-          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden">
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-[400px]">
             <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-4 px-6">
               <h3 className="text-xl font-bold">CHOOSE YOUR PACKAGE</h3>
               <p className="text-sm mt-1">Select one of the options</p>
@@ -171,43 +170,6 @@ const OrderSection = () => {
                 </div>
               </div>
 
-              {/* Purchase Options */}
-              <div className="flex gap-2 mb-4">
-                <button
-                  onClick={() => setSubscribeAndSave(false)}
-                  className={`flex-1 py-2 px-4 rounded font-medium transition-all ${
-                    !subscribeAndSave
-                      ? 'bg-gray-100 border-2 border-teal-600 text-teal-600'
-                      : 'bg-white border border-gray-300 text-gray-600'
-                  }`}
-                >
-                  One Time Purchase
-                </button>
-                <button
-                  onClick={() => setSubscribeAndSave(true)}
-                  className={`flex-1 py-2 px-4 rounded font-medium transition-all relative ${
-                    subscribeAndSave
-                      ? 'bg-teal-600 text-white'
-                      : 'bg-white border border-gray-300 text-gray-600'
-                  }`}
-                >
-                  Subscribe & Save
-                  <span className="absolute -top-2 -right-2 bg-teal-700 text-white text-xs font-bold px-2 py-0.5 rounded">
-                    45%
-                  </span>
-                </button>
-              </div>
-
-              {/* Subscribe Terms */}
-              {subscribeAndSave && (
-                <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-                  By selecting "Subscribe & Save" option above, you agree to receive a shipment of Lymph System Support 
-                  every {currentPackage.bottles} month{currentPackage.bottles > 1 ? 's' : ''}. You are authorizing us to charge your credit card every {currentPackage.bottles} 
-                  month{currentPackage.bottles > 1 ? 's' : ''}, matching the package you have selected. Coupon or discount codes can only be 
-                  applied to initial purchases and such discounts do not apply to future autoship products.
-                </p>
-              )}
-
               {/* Buy Button */}
               <Button 
                 size="lg" 
@@ -232,7 +194,7 @@ const OrderSection = () => {
           </div>
 
           {/* Right Box - What's Included */}
-          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden">
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-[280px]">
             <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
               <h3 className="text-lg font-bold">INCLUDED</h3>
             </div>
