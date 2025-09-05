@@ -210,7 +210,7 @@ const OrderSection = () => {
                 <img 
                   src="/lovable-uploads/d9bff540-a356-4042-89df-d1ab12d89a1e.png" 
                   alt="Dr. Andrew Weil MD with 365 days money back guarantee"
-                  className="w-full max-w-[150px] sm:max-w-[180px] mx-auto"
+                  className="w-full max-w-[220px] sm:max-w-[240px] mx-auto"
                 />
               </div>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
