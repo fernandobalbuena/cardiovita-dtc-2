@@ -1,6 +1,5 @@
 import OrderSection from "@/components/OrderSection";
 import TrustedBySection from "@/components/TrustedBySection";
-import VideoSection from "@/components/VideoSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import IngredientsSection from "@/components/IngredientsSection";
@@ -14,7 +13,6 @@ const Index = () => {
     <div className="min-h-screen">
       <OrderSection />
       <TrustedBySection />
-      <VideoSection />
       <TestimonialsSection />
       <BenefitsSection />
       <IngredientsSection />
