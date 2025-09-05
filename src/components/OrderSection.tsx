@@ -208,8 +208,8 @@ const OrderSection = () => {
             <div className="bg-white p-4">
               <div className="text-center mb-3">
                 <img 
-                  src="/dr-365-money-back.png" 
-                  alt="365 days money back guarantee"
+                  src="/lovable-uploads/d9bff540-a356-4042-89df-d1ab12d89a1e.png" 
+                  alt="Dr. Andrew Weil MD with 365 days money back guarantee"
                   className="w-full max-w-[150px] sm:max-w-[180px] mx-auto"
                 />
               </div>
