@@ -156,7 +156,7 @@ const ReviewsSection = () => {
               ))}
             </div>
             <span className="text-lg font-semibold">4.9 out of 5</span>
-            <span className="text-muted-foreground">Based on 10,847 reviews</span>
+            <span className="text-muted-foreground">Based on 179 reviews</span>
           </div>
         </div>
 
@@ -235,7 +235,7 @@ const ReviewsSection = () => {
           </Pagination>
           
           <p className="text-sm text-muted-foreground">
-            Showing {startIndex + 1}-{Math.min(endIndex, allReviews.length)} of 10,847 reviews
+            Showing {startIndex + 1}-{Math.min(endIndex, allReviews.length)} of 179 reviews
           </p>
         </div>
       </div>
