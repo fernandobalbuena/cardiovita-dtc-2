@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Check, Star } from "lucide-react";
 
@@ -60,46 +59,26 @@ const OrderSection = () => {
   const currentPackage = packages.find(p => p.id === selectedPackage) || packages[1];
 
   return (
-    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-8 sm:py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 px-4">
           Limited Time Offer on Cardiovita
         </h1>
 
-        {/* 3 Boxes Layout */}
-        <div className="flex justify-center gap-4 max-w-6xl mx-auto">
+        {/* 3 Boxes Layout - Desktop: side by side, Mobile: stacked */}
+        <div className="flex flex-col lg:flex-row justify-center gap-4 max-w-6xl mx-auto">
           
-          {/* Left Box - Guarantee */}
-          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-[280px]">
-            <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
-              <h3 className="text-lg font-bold">100% SATISFACTION GUARANTEE</h3>
-            </div>
-            <div className="bg-white p-4">
-              <div className="text-center mb-3">
-                <img 
-                  src="/dr-365-money-back.png" 
-                  alt="365 days money back guarantee"
-                  className="w-full max-w-[180px] mx-auto"
-                />
-              </div>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                You have <strong>365 days to try Cardiovita</strong> and see the results for yourself risk-free. 
-                If you are not 100% satisfied — simply contact us and we will gladly refund your money.
-              </p>
-            </div>
-          </div>
-
-          {/* Center Box - Package Selection */}
-          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-[400px]">
+          {/* Center Box - Package Selection (First on mobile) */}
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-full lg:w-[400px] lg:order-2">
             <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-4 px-6">
               <h3 className="text-xl font-bold">CHOOSE YOUR PACKAGE</h3>
               <p className="text-sm mt-1">Select one of the options</p>
             </div>
-            <div className="bg-white p-6">
+            <div className="bg-white p-4 sm:p-6">
               {/* Package Options */}
               <RadioGroup value={selectedPackage} onValueChange={setSelectedPackage}>
-                <div className="flex justify-center gap-4 mb-6">
+                <div className="flex justify-center gap-2 sm:gap-4 mb-6">
                   {packages.map((pkg) => (
                     <label
                       key={pkg.id}
@@ -115,22 +94,22 @@ const OrderSection = () => {
                             : 'border-gray-300 hover:border-gray-400'
                         } ${
                           pkg.id === '6' 
-                            ? 'p-4 min-w-[100px]' 
-                            : 'p-3 min-w-[85px]'
+                            ? 'p-3 sm:p-4 min-w-[80px] sm:min-w-[100px]' 
+                            : 'p-2 sm:p-3 min-w-[70px] sm:min-w-[85px]'
                         }`}
                       >
                         {pkg.isPopular && (
-                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
+                          <div className="absolute -top-2 sm:-top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-[10px] sm:text-xs font-bold px-1 sm:px-2 py-0.5 sm:py-1 rounded whitespace-nowrap">
                             DOCTOR'S CHOICE
                           </div>
                         )}
-                        <div className={`font-semibold mb-1 ${pkg.id === '6' ? 'text-sm' : 'text-xs'}`}>
+                        <div className={`font-semibold mb-1 ${pkg.id === '6' ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}`}>
                           {pkg.name}
                         </div>
-                        <div className={`font-bold ${pkg.id === '6' ? 'text-3xl' : 'text-2xl'}`}>
+                        <div className={`font-bold ${pkg.id === '6' ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'}`}>
                           {pkg.bottles}
                         </div>
-                        <div className={pkg.id === '6' ? 'text-sm' : 'text-xs'}>
+                        <div className={pkg.id === '6' ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}>
                           {pkg.bottles === 1 ? 'bottle' : 'bottles'}
                         </div>
                       </div>
@@ -145,11 +124,11 @@ const OrderSection = () => {
                   Regular Price: <span className="line-through">${currentPackage.regularPrice}</span>
                 </p>
                 {currentPackage.savings > 0 && (
-                  <p className="text-lg font-bold text-red-600">
+                  <p className="text-base sm:text-lg font-bold text-red-600">
                     YOU SAVE: ${currentPackage.savings.toFixed(1)}
                   </p>
                 )}
-                <p className="text-2xl font-bold text-teal-600">
+                <p className="text-xl sm:text-2xl font-bold text-teal-600">
                   ${currentPackage.perBottle.toFixed(1)} Per Bottle
                 </p>
               </div>
@@ -157,44 +136,44 @@ const OrderSection = () => {
               {/* Benefits */}
               <div className="space-y-2 mb-6">
                 <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.id === "6" || currentPackage.id === "3" ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
-                  <Check className="h-4 w-4" />
-                  <span className="text-sm font-semibold">FREE HEALTH EXPERT CALL</span>
+                  <Check className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold">FREE HEALTH EXPERT CALL</span>
                 </div>
                 <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.id === "6" || currentPackage.id === "3" ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
-                  <Check className="h-4 w-4" />
-                  <span className="text-sm font-semibold">2 FREE BONUS BOOKS</span>
+                  <Check className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold">2 FREE BONUS BOOKS</span>
                 </div>
                 <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.freeShipping ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-500'}`}>
-                  <Check className="h-4 w-4" />
-                  <span className="text-sm font-semibold">FREE SHIPPING IN US</span>
+                  <Check className="h-4 w-4 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm font-semibold">FREE SHIPPING IN US</span>
                 </div>
               </div>
 
               {/* Buy Button */}
               <Button 
                 size="lg" 
-                className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg py-6"
+                className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-base sm:text-lg py-5 sm:py-6"
               >
                 Buy Now
               </Button>
 
               {/* Reviews and Stock */}
-              <div className="flex items-center justify-between mt-4">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-2 mt-4">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
                   ))}
-                  <span className="text-sm text-gray-600 ml-1">179 reviews</span>
+                  <span className="text-xs sm:text-sm text-gray-600 ml-1">179 reviews</span>
                 </div>
-                <span className="text-sm text-green-600 font-medium flex items-center gap-1">
+                <span className="text-xs sm:text-sm text-green-600 font-medium flex items-center gap-1">
                   <Check className="h-4 w-4" /> In Stock
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right Box - What's Included */}
-          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-[280px]">
+          {/* Right Box - What's Included (Second on mobile) */}
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-full lg:w-[280px] lg:order-3">
             <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
               <h3 className="text-lg font-bold">INCLUDED</h3>
             </div>
@@ -224,10 +203,30 @@ const OrderSection = () => {
             </div>
           </div>
 
+          {/* Left Box - Guarantee (Third on mobile) */}
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden w-full lg:w-[280px] lg:order-1">
+            <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
+              <h3 className="text-base sm:text-lg font-bold">100% SATISFACTION GUARANTEE</h3>
+            </div>
+            <div className="bg-white p-4">
+              <div className="text-center mb-3">
+                <img 
+                  src="/dr-365-money-back.png" 
+                  alt="365 days money back guarantee"
+                  className="w-full max-w-[150px] sm:max-w-[180px] mx-auto"
+                />
+              </div>
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                You have <strong>365 days to try Cardiovita</strong> and see the results for yourself risk-free. 
+                If you are not 100% satisfied — simply contact us and we will gladly refund your money.
+              </p>
+            </div>
+          </div>
+
         </div>
 
         {/* Trust Text */}
-        <p className="text-center mt-8 text-gray-600">
+        <p className="text-center mt-6 sm:mt-8 text-gray-600 px-4 text-sm sm:text-base">
           Trusted by many, Cardiovita contributes to our total of 
           <strong className="text-teal-600"> 3,651,276+ satisfied customers</strong> since 2018
         </p>
