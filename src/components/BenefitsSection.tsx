@@ -82,7 +82,7 @@ const BenefitsSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-2xl font-bold text-primary mb-2">
-            Join 50,000+ Happy Customers
+            Join 7,000+ Happy Customers
           </p>
           <p className="text-muted-foreground">
             Start your transformation journey today

@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       before: "/before-1.jpg",
       after: "/after-1.jpg",
       title: "Life-Changing Results!",
-      content: "I've struggled with swelling in my legs for years. After just 3 weeks of taking Lymph System Support, the difference is incredible. My ankles are back to normal size and I feel so much lighter!",
+      content: "I've struggled with swelling in my legs for years. After just 3 weeks of taking Cardiovita, the difference is incredible. My ankles are back to normal size and I feel so much lighter!",
       date: "2 weeks ago"
     },
     {

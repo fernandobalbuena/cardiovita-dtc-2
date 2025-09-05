@@ -41,7 +41,7 @@ const HeroSection = () => {
                 Order Now - Save Up to 50%
               </Button>
               <p className="text-sm text-muted-foreground">
-                ⭐⭐⭐⭐⭐ Rated 4.9/5 by 10,000+ customers
+                ⭐⭐⭐⭐⭐ Rated 4.9/5 by 7,000+ customers
               </p>
             </div>
           </div>

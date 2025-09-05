@@ -83,7 +83,7 @@ const ReviewsSection = () => {
       verified: true,
       helpful: 93,
       title: "The embarrassing odor is GONE.",
-      content: "I need to mention something personal. It was the faint 'swampy' odor that I was so paranoid about, which Dr. Weil mentioned in his video. I felt truly seen. After about a month on Lymph System Support, it's completely gone. That specific relief, for me, was worth everything."
+      content: "I need to mention something personal. It was the faint 'swampy' odor that I was so paranoid about, which Dr. Weil mentioned in his video. I felt truly seen. After about a month on Cardiovita, it's completely gone. That specific relief, for me, was worth everything."
     },
     {
       id: 8,
@@ -123,7 +123,7 @@ const ReviewsSection = () => {
       verified: true,
       helpful: 142,
       title: "No more living in fear of a simple cut.",
-      content: "The constant fear was one of the worst parts. My skin was so stretched, shiny, and fragile, my doctor warned me that any small scratch could lead to a dangerous skin infection. I was terrified of working in my own garden. Since starting Lymph System Support, not only is the swelling down, but my skin itself looks and feels healthier and more resilient. I'm not afraid anymore. That peace of mind is priceless."
+      content: "The constant fear was one of the worst parts. My skin was so stretched, shiny, and fragile, my doctor warned me that any small scratch could lead to a dangerous skin infection. I was terrified of working in my own garden. Since starting Cardiovita, not only is the swelling down, but my skin itself looks and feels healthier and more resilient. I'm not afraid anymore. That peace of mind is priceless."
     },
     {
       id: 12,
@@ -133,7 +133,7 @@ const ReviewsSection = () => {
       verified: true,
       helpful: 423,
       title: "I danced at my grandson's wedding all night long.",
-      content: "My grandson's wedding was six months away, and I was secretly dreading it. At Christmas last year, I couldn't even stand long enough for the family photo without agonizing pain. The thought of the wedding, let alone dancing, brought me to tears. I started taking Lymph System Support after a friend sent me Dr. Weil's video. I was hopeful, but realistic. Well, last Saturday, not only did I stand for all the photos with a huge smile on my face, but I danced the night away with my husband and my grandson. My family was stunned, and I felt 20 years younger. I have this formula to thank for a memory I will cherish forever."
+      content: "My grandson's wedding was six months away, and I was secretly dreading it. At Christmas last year, I couldn't even stand long enough for the family photo without agonizing pain. The thought of the wedding, let alone dancing, brought me to tears. I started taking Cardiovita after a friend sent me Dr. Weil's video. I was hopeful, but realistic. Well, last Saturday, not only did I stand for all the photos with a huge smile on my face, but I danced the night away with my husband and my grandson. My family was stunned, and I felt 20 years younger. I have this formula to thank for a memory I will cherish forever."
     }
   ];
 

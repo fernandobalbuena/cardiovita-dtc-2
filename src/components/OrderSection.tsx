@@ -255,7 +255,7 @@ const OrderSection = () => {
         {/* Trust Text */}
         <p className="text-center mt-6 sm:mt-8 text-gray-600 px-4 text-sm sm:text-base">
           Trusted by many, Cardiovita contributes to our total of 
-          <strong className="text-teal-600"> 3,651,276+ satisfied customers</strong> since 2018
+          <strong className="text-teal-600"> 7,000+ satisfied customers</strong> since 2018
         </p>
       </div>
     </section>

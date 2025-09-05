@@ -3,7 +3,7 @@ import customersImage from "@/assets/customers-collage.png";
 
 const TrustedBySection = () => {
   const [bottleCount, setBottleCount] = useState(0);
-  const finalCount = 11009125;
+  const finalCount = 100125;
   
   // Animate bottle count on mount
   useEffect(() => {
@@ -42,10 +42,10 @@ const TrustedBySection = () => {
             Trusted by many. Cardiovita contributes to our total of
           </h2>
           <p className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3" style={{ color: '#FFD700' }}>
-            {bottleCount.toLocaleString()} bottles sold,
+            {bottleCount.toLocaleString()}+ bottles sold,
           </p>
           <p className="text-lg sm:text-xl lg:text-2xl">
-            supporting your lymph health.
+            supporting your cardiovascular health.
           </p>
         </div>
 

@@ -16,7 +16,7 @@ const GuaranteeSection = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're so confident in Lymph System Support that we offer an industry-leading 
+              We're so confident in Cardiovita that we offer an industry-leading 
               180-day money-back guarantee. If you're not completely satisfied with your results, 
               simply return the product for a full refund - no questions asked.
             </p>
@@ -50,7 +50,7 @@ const GuaranteeSection = () => {
                 Your Satisfaction Is Our #1 Priority
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                Join over 50,000+ satisfied customers worldwide
+                Join over 7,000+ satisfied customers worldwide
               </p>
             </div>
           </div>
