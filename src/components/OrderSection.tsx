@@ -21,13 +21,13 @@ const OrderSection = () => {
 
   const packages: PackageOption[] = [
     {
-      id: "1",
-      bottles: 1,
+      id: "2",
+      bottles: 2,
       name: "STARTER",
-      label: "1 bottle",
-      regularPrice: 69,
-      price: 69,
-      perBottle: 69,
+      label: "2 bottles",
+      regularPrice: 158,
+      price: 158,
+      perBottle: 79,
       savings: 0,
       freeShipping: false
     },
@@ -36,10 +36,10 @@ const OrderSection = () => {
       bottles: 6,
       name: "DOCTOR'S CHOICE",
       label: "6 bottles",
-      regularPrice: 414,
-      price: 226.8,
-      perBottle: 37.8,
-      savings: 187.2,
+      regularPrice: 474,
+      price: 294,
+      perBottle: 49,
+      savings: 180,
       freeShipping: true,
       isPopular: true
     },
@@ -48,10 +48,10 @@ const OrderSection = () => {
       bottles: 3,
       name: "LYMPH SUPERHERO",
       label: "3 bottles",
-      regularPrice: 207,
-      price: 147,
-      perBottle: 49,
-      savings: 60,
+      regularPrice: 279,
+      price: 207,
+      perBottle: 69,
+      savings: 72,
       freeShipping: true
     }
   ];
@@ -107,7 +107,7 @@ const OrderSection = () => {
                           {pkg.bottles}
                         </div>
                         <div className={pkg.id === '6' ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}>
-                          {pkg.bottles === 1 ? 'bottle' : 'bottles'}
+                          {pkg.bottles <= 1 ? 'bottle' : 'bottles'}
                         </div>
                       </div>
                     </label>
@@ -149,7 +149,7 @@ const OrderSection = () => {
               {/* Buy Button */}
               <a 
                 href={
-                  currentPackage.id === "1" ? "https://ab.capillex.shop/click/1" :
+                  currentPackage.id === "2" ? "https://ab.capillex.shop/click/1" :
                   currentPackage.id === "3" ? "https://ab.capillex.shop/click/2" :
                   "https://ab.capillex.shop/click/3"
                 }
@@ -188,7 +188,7 @@ const OrderSection = () => {
               <div className="text-center">
                 {/* Product Images */}
                 <div className="flex items-center justify-center h-[200px]">
-                  {currentPackage.id === "1" ? (
+                  {currentPackage.id === "2" ? (
                     <img 
                       src="/lovable-uploads/978a2a68-1aed-4848-91b1-7185910a849b.png"
                       alt="2 bottles of Cardiovita"
