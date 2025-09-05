@@ -12,33 +12,33 @@ const BenefitsSection = () => {
   const benefits = [
     {
       icon: Droplets,
-      title: "Reduces Water Retention",
-      description: "Helps flush excess fluids and reduce bloating naturally"
+      title: "Drains 'Toxic' Fluid Buildup",
+      description: "Helps flush the inflammatory 'bio-sludge' that causes heavy, swollen legs and feet"
     },
     {
       icon: Heart,
-      title: "Improves Circulation",
-      description: "Enhances blood flow and oxygen delivery throughout your body"
+      title: "Supports Healthy Circulation",
+      description: "By clearing lymphatic pathways, it also enhances blood flow, helping to ease that 'pins and needles' feeling in your feet"
     },
     {
       icon: Battery,
-      title: "Boosts Energy Levels",
-      description: "Feel more energetic and vibrant throughout the day"
+      title: "Restores Natural Energy",
+      description: "Purifies your blood of the toxic filth that causes bone-deep fatigue and brain fog, restoring your natural vitality"
     },
     {
       icon: ShieldCheck,
-      title: "Supports Immunity",
-      description: "Strengthens your body's natural defense system"
+      title: "Fortifies Your Body's Defenses",
+      description: "Strengthens your natural immune system to protect vulnerable skin from dangerous infections like cellulitis"
     },
     {
       icon: Sparkles,
-      title: "Clearer Skin",
-      description: "Promotes healthy, glowing skin from within"
+      title: "Promotes Smooth, Healthy Skin",
+      description: "Relieves the tightness, shininess, and 'alligator skin' look caused by trapped inflammatory fluid"
     },
     {
       icon: Activity,
-      title: "Better Mobility",
-      description: "Reduces stiffness and improves joint flexibility"
+      title: "Restores Effortless Mobility",
+      description: "Reduces the stiffness and 'concrete pillar' feeling, giving you back the freedom to move, walk, and dance with ease"
     }
   ];
 
@@ -47,10 +47,10 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Transform Your Health From Within
+            Flush The 'Internal Swamp' and Reclaim Your Life
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Experience these life-changing benefits
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            By targeting the root cause that conventional medicine ignores, our unique formula delivers results you can feel
           </p>
         </div>
 
