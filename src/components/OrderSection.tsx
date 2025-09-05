@@ -194,6 +194,18 @@ const OrderSection = () => {
                       alt="2 bottles of Cardiovita"
                       className="h-full object-contain"
                     />
+                  ) : currentPackage.id === "3" ? (
+                    <img 
+                      src="/lovable-uploads/b2e2323f-5669-4dc7-839b-7e9e640a43c2.png"
+                      alt="3 bottles of Cardiovita"
+                      className="h-full object-contain"
+                    />
+                  ) : currentPackage.id === "6" ? (
+                    <img 
+                      src="/lovable-uploads/974f6048-6484-442a-954e-429f4b6ff4ea.png"
+                      alt="6 bottles of Cardiovita"
+                      className="h-full object-contain"
+                    />
                   ) : (
                     <img 
                       src={`/bottle-${currentPackage.bottles}.png`}
