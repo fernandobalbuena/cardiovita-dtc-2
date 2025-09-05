@@ -9,15 +9,15 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-accent-secondary font-semibold uppercase tracking-wider">
-                #1 Rated Lymphatic Support Formula
+                #1 Rated Cardiovascular Support Formula
               </p>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                Support Your Body's Natural 
-                <span className="text-primary"> Detox System</span>
+                Support Your Heart's Natural 
+                <span className="text-primary"> Health System</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                The breakthrough formula that helps maintain healthy lymphatic drainage, 
-                reduces water retention, and supports your immune system naturally.
+                The breakthrough formula that helps maintain healthy cardiovascular function, 
+                supports blood circulation, and promotes your heart health naturally.
               </p>
             </div>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent blur-3xl"></div>
             <img 
               src="/lymph-product-hero.png" 
-              alt="Lymph System Support Bottles"
+              alt="Cardiovita Bottles"
               className="relative z-10 w-full max-w-lg mx-auto animate-float"
             />
           </div>

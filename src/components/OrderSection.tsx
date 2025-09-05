@@ -64,7 +64,7 @@ const OrderSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-8">
-          Limited Time Offer on Lymph System Support
+          Limited Time Offer on Cardiovita
         </h1>
 
         {/* 3 Boxes Layout */}
@@ -84,7 +84,7 @@ const OrderSection = () => {
                 />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
-                You have <strong>365 days to try Lymph System Support</strong> and see the results for yourself risk-free. 
+                You have <strong>365 days to try Cardiovita</strong> and see the results for yourself risk-free. 
                 If you are not 100% satisfied — simply contact us and we will gladly refund your money.
               </p>
             </div>
@@ -204,7 +204,7 @@ const OrderSection = () => {
                 <div className="flex items-center justify-center h-[200px]">
                   <img 
                     src={`/bottle-${currentPackage.bottles}.png`}
-                    alt={`${currentPackage.bottles} bottles of Lymph System Support`}
+                    alt={`${currentPackage.bottles} bottles of Cardiovita`}
                     className="h-full object-contain"
                   />
                 </div>
@@ -212,7 +212,7 @@ const OrderSection = () => {
                 {/* Product Description */}
                 <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                   <p className="text-sm text-gray-700 font-medium">
-                    {currentPackage.bottles} {currentPackage.bottles === 1 ? 'Bottle' : 'Bottles'} of Lymph System Support
+                    {currentPackage.bottles} {currentPackage.bottles === 1 ? 'Bottle' : 'Bottles'} of Cardiovita
                   </p>
                   {(currentPackage.id === "6" || currentPackage.id === "3") && (
                     <p className="text-xs text-teal-600 mt-2">
@@ -228,7 +228,7 @@ const OrderSection = () => {
 
         {/* Trust Text */}
         <p className="text-center mt-8 text-gray-600">
-          Trusted by many, Lymph System Support contributes to our total of 
+          Trusted by many, Cardiovita contributes to our total of 
           <strong className="text-teal-600"> 3,651,276+ satisfied customers</strong> since 2018
         </p>
       </div>

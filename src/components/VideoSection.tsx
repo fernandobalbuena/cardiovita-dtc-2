@@ -5,7 +5,7 @@ const VideoSection = () => {
   const videos = [
     {
       id: 1,
-      title: "How Lymph System Support Works",
+      title: "How Cardiovita Works",
       thumbnail: "/video-thumb-1.jpg",
       duration: "3:42"
     },

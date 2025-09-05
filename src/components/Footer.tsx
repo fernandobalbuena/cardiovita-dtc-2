@@ -61,7 +61,7 @@ const Footer = () => {
         <div className="border-t pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Lymph System Support. All rights reserved.
+              © 2024 Cardiovita. All rights reserved.
             </p>
             <div className="flex gap-4">
               <img src="/payment-visa.png" alt="Visa" className="h-8" />
