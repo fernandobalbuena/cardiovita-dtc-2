@@ -1,31 +1,31 @@
 import { Card } from "@/components/ui/card";
-import { Leaf, FlaskConical, Shield, Zap } from "lucide-react";
+import { Beaker, Slice, Fish, Flower, Shield } from "lucide-react";
 
 const IngredientsSection = () => {
   const ingredients = [
     {
-      name: "Horse Chestnut Extract",
-      icon: Leaf,
-      benefit: "Improves circulation and reduces swelling",
-      description: "Clinically proven to strengthen vein walls and improve lymphatic flow"
+      name: "Coumarin (from Citrus Extract)",
+      icon: Beaker,
+      benefit: "The 'Roto-Rooter' for Your System",
+      description: "This powerhouse compound, validated by a landmark New England Journal of Medicine study, helps blast through lymphatic clogs, clearing the primary blockage"
     },
     {
-      name: "Butcher's Broom",
-      icon: FlaskConical,
-      benefit: "Supports healthy veins and circulation",
-      description: "Ancient herb known for its powerful anti-inflammatory properties"
+      name: "Bromelain (from Pineapple Core)",
+      icon: Slice,
+      benefit: "The 'Demolition Crew' for Sludge",
+      description: "A potent enzyme that acts like a microscopic demolition army, dissolving the thick, sticky, protein-heavy 'bio-sludge' that paralyzes your lymphatic flow"
+    },
+    {
+      name: "Okinawan Kelp",
+      icon: Fish,
+      benefit: "The 'Guardian' of the Balance",
+      description: "Restores the vital electrolytes (like potassium) that conventional diuretics strip away, while its Fucoxanthin content helps break down fatty deposits in the vessels"
     },
     {
       name: "Dandelion Root",
-      icon: Shield,
-      benefit: "Natural diuretic and detoxifier",
-      description: "Helps flush excess fluids and toxins from the body"
-    },
-    {
-      name: "Ginger Root",
-      icon: Zap,
-      benefit: "Boosts metabolism and immunity",
-      description: "Powerful antioxidant that supports overall lymphatic health"
+      icon: Flower,
+      benefit: "The 'Smart' Final Flush",
+      description: "A natural diuretic revered by our ancestors. It gently helps flush the dislodged toxic waste out of your system while simultaneously replenishing vital potassium—unlike harsh pharmaceutical drugs"
     }
   ];
 
@@ -34,10 +34,10 @@ const IngredientsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Scientifically-Backed Ingredients
+            An Elite Team of 'Heroes' For Your Health
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Each ingredient is carefully selected for maximum effectiveness
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Each 'hero' was personally selected by Dr. Weil for a specific, vital mission in the battle against swelling
           </p>
         </div>
 
