@@ -1,69 +1,146 @@
 import { Card } from "@/components/ui/card";
 import { Star, ThumbsUp, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 const ReviewsSection = () => {
-  const reviews = [
+  const [currentPage, setCurrentPage] = useState(1);
+  const reviewsPerPage = 6;
+
+  const allReviews = [
     {
       id: 1,
-      author: "Emily Thompson",
+      author: "Margaret S.",
       rating: 5,
-      date: "3 days ago",
+      date: "2 days ago",
       verified: true,
-      helpful: 42,
-      title: "Game changer for my lymphedema!",
-      content: "I've been dealing with lymphedema in my legs for 5 years. After trying countless remedies, this is the only thing that has actually made a visible difference. The swelling has reduced by at least 50% and I can finally wear my regular shoes again!"
+      helpful: 89,
+      title: "My 'alligator skin' is gone!",
+      content: "Forget the swelling for a second—the ugly, scaly 'alligator skin' on my shins is completely GONE. My skin is smooth again for the first time in I don't know how long. Unbelievable."
     },
     {
       id: 2,
-      author: "Robert Chen",
+      author: "Jennifer R.",
       rating: 5,
-      date: "1 week ago",
+      date: "5 days ago",
       verified: true,
-      helpful: 38,
-      title: "Skeptical at first, now a believer",
-      content: "As a healthcare professional, I was skeptical about supplements. But the science behind this formula convinced me to try it. I'm amazed at how much better I feel - less bloated, more energy, and my chronic sinus issues have improved."
+      helpful: 156,
+      title: "Finally, the REAL answer. I can see my ankles again.",
+      content: "I was so skeptical. For years, doctors fed me the same 'poor circulation' line and sent me home with diuretics that just made me feel weak. When I watched Dr. Weil's presentation and he explained the 'lymphatic swamp,' it was like a lightbulb went on. It just made logical sense. I ordered a bottle, and I'm not exaggerating when I say this has been a godsend. Within the first week, the painful tightness was gone, and I could actually see the bones in my ankles for the first time in years. Thank you, Dr. Weil."
     },
     {
       id: 3,
-      author: "Maria Garcia",
+      author: "David K.",
       rating: 5,
-      date: "2 weeks ago",
+      date: "1 week ago",
       verified: true,
-      helpful: 29,
-      title: "Finally, something that works!",
-      content: "I've struggled with water retention my whole adult life. Within just 10 days, I noticed my rings fitting better and my face looking less puffy. Now at 2 months, I've lost 8 pounds of water weight and feel incredible!"
+      helpful: 67,
+      title: "Felt the difference in 48 hours.",
+      content: "I was a total skeptic, but I felt a difference in 48 hours. The painful pressure in my legs just... released. Today I'm wearing shoes I haven't been able to fit into for 10 years. Don't wait to try this."
     },
     {
       id: 4,
-      author: "David Miller",
+      author: "Stephen M.",
       rating: 5,
-      date: "3 weeks ago",
+      date: "2 weeks ago",
       verified: true,
-      helpful: 51,
-      title: "Excellent customer service too",
-      content: "Not only does the product work amazingly well, but when I had questions, their customer service team was incredibly helpful and knowledgeable. They really care about their customers' success."
+      helpful: 234,
+      title: "My legs look like LEGS again, not tree trunks.",
+      content: "For the last decade, I haven't had legs; I've had what my wife and I grimly called my 'tree trunks.' They were heavy, constantly aching, and so swollen that I was deeply embarrassed to wear shorts, even in the summer heat. I had given up all hope and was resigned to a life in ugly orthopedic shoes that cost a fortune. Hearing Dr. Weil talk about the toxic 'bio-sludge' was the first explanation that didn't feel like a dismissal of my pain. It was the missing piece of the puzzle. I'm two months in now, and not only can I fit into my favorite dress shoes I haven't touched in five years, but my wife actually cried the other day and said, 'Stephen, your legs look like your legs again.' You cannot put a price on that feeling of getting your life back."
     },
     {
       id: 5,
-      author: "Lisa Anderson",
+      author: "Sarah L.",
       rating: 5,
-      date: "1 month ago",
+      date: "3 weeks ago",
       verified: true,
-      helpful: 67,
-      title: "Worth every penny",
-      content: "I was hesitant about the price at first, but this has been the best investment in my health. My energy levels are through the roof, and the brain fog I've had for years is completely gone. I feel like a new person!"
+      helpful: 45,
+      title: "It works.",
+      content: "It's been about five months. The decrease in swelling is noticeable and it's gradual. This supplement is a keeper for me!"
     },
     {
       id: 6,
-      author: "James Wilson",
+      author: "Richard T.",
       rating: 5,
       date: "1 month ago",
       verified: true,
-      helpful: 44,
-      title: "Noticeable results in just 2 weeks",
-      content: "The puffiness under my eyes is gone, my ankles don't swell anymore after long days at work, and I just feel 'lighter' overall. This stuff really works!"
+      helpful: 312,
+      title: "My cardiologist was so impressed, he wrote down the name.",
+      content: "As a former engineer, I was intrigued by Dr. Weil's logical explanation of the lymphatic system but remained a healthy skeptic. I decided to give this a proper 90-day trial, tracking my progress. The change wasn't overnight, but it was undeniable. Week by week, the 'water-logged' feeling in my calves lessened. The skin felt softer, less stretched. At my last check-up, my cardiologist—who had previously just told me to 'wear my socks and cut down on salt'—was visibly impressed by the reduction in fluid. He asked what I was doing differently, and after I explained Dr. Weil's approach to clearing the 'lymphatic swamp,' he took down the name of the product for his own research. That's all the proof I need. I've already ordered another six bottles to make sure I never run out."
+    },
+    {
+      id: 7,
+      author: "Patricia W.",
+      rating: 5,
+      date: "3 days ago",
+      verified: true,
+      helpful: 78,
+      title: "Walking without pain for the first time in years",
+      content: "The constant throbbing pain in my legs is gone. I can walk around the block without having to stop and rest. My husband says I look 10 years younger because I'm not grimacing in pain all the time."
+    },
+    {
+      id: 8,
+      author: "Michael B.",
+      rating: 5,
+      date: "1 week ago",
+      verified: true,
+      helpful: 92,
+      title: "The puffiness in my face disappeared too!",
+      content: "I bought this for my swollen legs, but the unexpected bonus was that the puffiness in my face went away too. I look healthier and more alert. People keep asking if I've lost weight!"
+    },
+    {
+      id: 9,
+      author: "Linda K.",
+      rating: 5,
+      date: "2 weeks ago",
+      verified: true,
+      helpful: 145,
+      title: "No more compression socks!",
+      content: "After 8 years of wearing those awful compression socks every single day, I haven't worn them once in the past month. The relief is incredible. My legs feel normal again."
+    },
+    {
+      id: 10,
+      author: "Thomas R.",
+      rating: 5,
+      date: "4 days ago",
+      verified: true,
+      helpful: 56,
+      title: "Energy levels through the roof",
+      content: "Not only is the swelling gone, but I have so much more energy. I think my body was working overtime dealing with all that fluid. Now I feel 20 years younger!"
+    },
+    {
+      id: 11,
+      author: "Barbara G.",
+      rating: 5,
+      date: "1 month ago",
+      verified: true,
+      helpful: 189,
+      title: "My doctor asked what I was doing differently",
+      content: "At my last appointment, my doctor was shocked. She said the improvement in my lymphedema was remarkable. When I told her about this supplement, she said 'Whatever you're doing, keep doing it!'"
+    },
+    {
+      id: 12,
+      author: "James P.",
+      rating: 5,
+      date: "2 weeks ago",
+      verified: true,
+      helpful: 101,
+      title: "Finally found what works",
+      content: "I've tried everything - massage, elevation, every supplement under the sun. This is the only thing that has actually made a real, lasting difference. Worth every penny."
     }
   ];
+
+  const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
+  const startIndex = (currentPage - 1) * reviewsPerPage;
+  const endIndex = startIndex + reviewsPerPage;
+  const currentReviews = allReviews.slice(startIndex, endIndex);
 
   return (
     <section className="py-16 bg-secondary/10">
@@ -84,7 +161,7 @@ const ReviewsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {reviews.map((review) => (
+          {currentReviews.map((review) => (
             <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
               <div className="space-y-3">
                 <div className="flex items-start justify-between">
@@ -126,9 +203,39 @@ const ReviewsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        <div className="flex flex-col items-center gap-4 mt-8">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious 
+                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+              
+              {[...Array(totalPages)].map((_, index) => (
+                <PaginationItem key={index}>
+                  <PaginationLink
+                    onClick={() => setCurrentPage(index + 1)}
+                    isActive={currentPage === index + 1}
+                    className="cursor-pointer"
+                  >
+                    {index + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              
+              <PaginationItem>
+                <PaginationNext 
+                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+          
           <p className="text-sm text-muted-foreground">
-            Showing 6 of 10,847 reviews
+            Showing {startIndex + 1}-{Math.min(endIndex, allReviews.length)} of 10,847 reviews
           </p>
         </div>
       </div>
