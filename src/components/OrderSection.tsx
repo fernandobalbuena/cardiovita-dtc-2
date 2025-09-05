@@ -94,7 +94,7 @@ const OrderSection = () => {
                             : 'border-gray-300 hover:border-gray-400'
                         } ${
                           pkg.id === '6' 
-                            ? 'p-3 sm:p-4 min-w-[80px] sm:min-w-[100px]' 
+                            ? 'p-3 sm:p-4 min-w-[70px] sm:min-w-[85px]' 
                             : 'p-2 sm:p-3 min-w-[70px] sm:min-w-[85px]'
                         }`}
                       >
@@ -103,10 +103,7 @@ const OrderSection = () => {
                             DOCTOR'S CHOICE
                           </div>
                         )}
-                        <div className={`font-semibold mb-1 ${pkg.id === '6' ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}`}>
-                          {pkg.name}
-                        </div>
-                        <div className={`font-bold ${pkg.id === '6' ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'}`}>
+                        <div className={`font-bold ${pkg.id === '6' ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'} mt-2`}>
                           {pkg.bottles}
                         </div>
                         <div className={pkg.id === '6' ? 'text-xs sm:text-sm' : 'text-[10px] sm:text-xs'}>
