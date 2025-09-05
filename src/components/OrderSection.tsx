@@ -188,11 +188,19 @@ const OrderSection = () => {
               <div className="text-center">
                 {/* Product Images */}
                 <div className="flex items-center justify-center h-[200px]">
-                  <img 
-                    src={currentPackage.id === "1" ? "/lovable-uploads/978a2a68-1aed-4848-91b1-7185910a849b.png" : `/bottle-${currentPackage.bottles}.png`}
-                    alt={`${currentPackage.bottles} bottles of Cardiovita`}
-                    className="h-full object-contain"
-                  />
+                  {currentPackage.id === "1" ? (
+                    <img 
+                      src="/lovable-uploads/978a2a68-1aed-4848-91b1-7185910a849b.png"
+                      alt="2 bottles of Cardiovita"
+                      className="h-full object-contain"
+                    />
+                  ) : (
+                    <img 
+                      src={`/bottle-${currentPackage.bottles}.png`}
+                      alt={`${currentPackage.bottles} bottles of Cardiovita`}
+                      className="h-full object-contain"
+                    />
+                  )}
                 </div>
                 
                 {/* Product Description */}
