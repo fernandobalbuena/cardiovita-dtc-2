@@ -81,29 +81,6 @@ const TestimonialsSection = () => {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="text-center">
-                    <p className="text-xs font-semibold mb-1">Before</p>
-                    <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                      <img
-                        src={testimonial.before}
-                        alt="Before"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xs font-semibold mb-1">After</p>
-                    <div className="aspect-square bg-muted rounded-lg overflow-hidden">
-                      <img
-                        src={testimonial.after}
-                        alt="After"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-
                 <div>
                   <h4 className="font-bold mb-2">{testimonial.title}</h4>
                   <p className="text-sm text-muted-foreground">
