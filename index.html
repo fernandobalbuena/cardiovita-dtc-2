@@ -18,6 +18,106 @@
   </head>
 
   <body>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("click", async (event) => {
+        const link = event.target.closest("a"); // Captura o elemento <a> mais próximo do clique
+        if (!link || !link.href.includes("/click")) return; // Verifica se o link contém '/click'
+        
+        event.preventDefault(); // Bloqueia a navegação imediata para garantir o rastreamento primeiro
+        
+        await handlePostbackAndNavigate(link.href);
+    });
+    
+    async function handlePostbackAndNavigate(href) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const clickid = urlParams.get("rtkcid"); // Extrai o 'rtkcid' da URL atual
+        
+        if (!clickid) {
+            console.error("ClickID não encontrado na URL.");
+            window.location.href = href; // Se não encontrar o ClickID, ainda abre o link na mesma aba
+            return;
+        }
+        
+        const postbackUrl = "https://m6zpe.ttrk.io/postback";
+        const postbackParams = new URLSearchParams({
+            clickid: clickid,
+            type: "InitiateCheckout",
+        });
+
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3000); // Timeout para abortar a requisição se demorar mais de 3s
+            
+            const response = await fetch(`${postbackUrl}?${postbackParams}`, {
+                method: "GET",
+                signal: controller.signal, // Usa o AbortController para controle de timeout
+            });
+
+            clearTimeout(timeoutId); // Cancela o timeout se a requisição for bem-sucedida
+            
+            if (!response.ok) {
+                throw new Error(`Erro no postback: ${response.statusText}`);
+            }
+
+            console.log("Postback enviado com sucesso.");
+        } catch (error) {
+            console.error("Erro ao enviar postback:", error);
+        } finally {
+            window.location.href = href; // Sempre abre o link na mesma aba após o postback, independente do sucesso
+        }
+    }
+
+    // Bloqueia a abertura de links/hrefs com botão direito ou botão do meio
+    document.body.addEventListener("contextmenu", async (event) => {
+        const link = event.target.closest("a");
+        if (link && link.href.includes("/click")) {
+            event.preventDefault();
+            await handlePostbackAndNavigate(link.href);
+        }
+    });
+
+    document.body.addEventListener("mousedown", async (event) => {
+        if (event.button === 1) { // Botão do meio do mouse
+            const link = event.target.closest("a");
+            if (link && link.href.includes("/click")) {
+                event.preventDefault();
+                await handlePostbackAndNavigate(link.href);
+            }
+        }
+    });
+
+    document.body.addEventListener("auxclick", async (event) => {
+        if (event.button === 1) { // Botão do meio
+            const link = event.target.closest("a");
+            if (link && link.href.includes("/click")) {
+                event.preventDefault();
+                await handlePostbackAndNavigate(link.href);
+            }
+        }
+    });
+
+    // Corrigido para evitar acionamento ao rolar a tela em mobile
+    let touchStartY = 0;
+
+    document.body.addEventListener("touchstart", (event) => {
+        touchStartY = event.touches[0].clientY; // Armazena a posição inicial do toque
+    });
+
+    document.body.addEventListener("touchend", async (event) => {
+        const link = event.target.closest("a");
+        if (!link || !link.href.includes("/click")) return;
+
+        // Verifica se o usuário realmente clicou e não apenas rolou a tela
+        if (Math.abs(event.changedTouches[0].clientY - touchStartY) > 10) {
+            return; // Se a diferença na posição Y for maior que 10px, foi um swipe, não um clique
+        }
+
+        event.preventDefault();
+        await handlePostbackAndNavigate(link.href);
+    });
+});
+</script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
