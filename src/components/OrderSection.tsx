@@ -69,19 +69,19 @@ const OrderSection = () => {
         </h1>
 
         {/* 3 Boxes Layout */}
-        <div className="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-[300px_1fr_300px] gap-4 max-w-7xl mx-auto">
           
           {/* Left Box - Guarantee */}
-          <div className="bg-gradient-to-b from-teal-600 to-teal-700 rounded-lg overflow-hidden">
-            <div className="bg-teal-700 text-white text-center py-4 px-6">
-              <h3 className="text-xl font-bold">100% SATISFACTION GUARANTEE</h3>
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
+              <h3 className="text-lg font-bold">100% SATISFACTION GUARANTEE</h3>
             </div>
-            <div className="bg-white p-6">
-              <div className="text-center mb-4">
+            <div className="bg-white p-4">
+              <div className="text-center mb-3">
                 <img 
                   src="/dr-365-money-back.png" 
                   alt="365 days money back guarantee"
-                  className="w-full max-w-[200px] mx-auto"
+                  className="w-full max-w-[180px] mx-auto"
                 />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
@@ -92,15 +92,15 @@ const OrderSection = () => {
           </div>
 
           {/* Center Box - Package Selection */}
-          <div className="bg-gradient-to-b from-teal-600 to-teal-700 rounded-lg overflow-hidden">
-            <div className="bg-teal-700 text-white text-center py-4 px-6">
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-4 px-6">
               <h3 className="text-xl font-bold">CHOOSE YOUR PACKAGE</h3>
               <p className="text-sm mt-1">Select one of the options</p>
             </div>
             <div className="bg-white p-6">
               {/* Package Options */}
               <RadioGroup value={selectedPackage} onValueChange={setSelectedPackage}>
-                <div className="flex justify-center gap-3 mb-6">
+                <div className="flex justify-center gap-4 mb-6">
                   {packages.map((pkg) => (
                     <label
                       key={pkg.id}
@@ -110,20 +110,30 @@ const OrderSection = () => {
                     >
                       <RadioGroupItem value={pkg.id} className="sr-only" />
                       <div
-                        className={`border-2 rounded-lg p-3 text-center transition-all ${
+                        className={`border-2 rounded-lg text-center transition-all ${
                           selectedPackage === pkg.id
                             ? 'border-teal-600 bg-teal-50'
                             : 'border-gray-300 hover:border-gray-400'
+                        } ${
+                          pkg.id === '6' 
+                            ? 'p-4 min-w-[100px]' 
+                            : 'p-3 min-w-[85px]'
                         }`}
                       >
                         {pkg.isPopular && (
-                          <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-2 py-0.5 rounded">
+                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded whitespace-nowrap">
                             DOCTOR'S CHOICE
                           </div>
                         )}
-                        <div className="text-xs font-semibold mb-1">{pkg.name}</div>
-                        <div className="text-2xl font-bold">{pkg.bottles}</div>
-                        <div className="text-xs">{pkg.bottles === 1 ? 'bottle' : 'bottles'}</div>
+                        <div className={`font-semibold mb-1 ${pkg.id === '6' ? 'text-sm' : 'text-xs'}`}>
+                          {pkg.name}
+                        </div>
+                        <div className={`font-bold ${pkg.id === '6' ? 'text-3xl' : 'text-2xl'}`}>
+                          {pkg.bottles}
+                        </div>
+                        <div className={pkg.id === '6' ? 'text-sm' : 'text-xs'}>
+                          {pkg.bottles === 1 ? 'bottle' : 'bottles'}
+                        </div>
                       </div>
                     </label>
                   ))}
@@ -222,42 +232,32 @@ const OrderSection = () => {
           </div>
 
           {/* Right Box - What's Included */}
-          <div className="bg-gradient-to-b from-teal-600 to-teal-700 rounded-lg overflow-hidden">
-            <div className="bg-teal-700 text-white text-center py-4 px-6">
-              <h3 className="text-xl font-bold">INCLUDED</h3>
+          <div className="rounded-lg border-2 border-gray-300 shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-b from-teal-600 to-teal-700 text-white text-center py-3 px-4">
+              <h3 className="text-lg font-bold">INCLUDED</h3>
             </div>
-            <div className="bg-white p-6">
+            <div className="bg-white p-4">
               <div className="text-center">
                 {/* Product Images */}
-                <div className="mb-4">
+                <div className="flex items-center justify-center h-[200px]">
                   <img 
                     src={`/bottle-${currentPackage.bottles}.png`}
                     alt={`${currentPackage.bottles} bottles of Lymph System Support`}
-                    className="h-40 mx-auto"
+                    className="h-full object-contain"
                   />
                 </div>
                 
-                {/* Free Bonus Badge */}
-                {(currentPackage.id === "6" || currentPackage.id === "3") && (
-                  <div className="relative mt-4">
-                    <div className="absolute -top-3 right-0 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      FREE
-                    </div>
-                    <img 
-                      src="/3-badges.jpg"
-                      alt="Free bonus books"
-                      className="w-full rounded-lg"
-                    />
-                  </div>
-                )}
-                
-                {currentPackage.id === "1" && (
-                  <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600">
-                      Get {currentPackage.bottles} bottle of Lymph System Support
+                {/* Product Description */}
+                <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+                  <p className="text-sm text-gray-700 font-medium">
+                    {currentPackage.bottles} {currentPackage.bottles === 1 ? 'Bottle' : 'Bottles'} of Lymph System Support
+                  </p>
+                  {(currentPackage.id === "6" || currentPackage.id === "3") && (
+                    <p className="text-xs text-teal-600 mt-2">
+                      + 2 FREE Bonus Books
                     </p>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </div>
