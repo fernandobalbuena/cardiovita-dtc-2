@@ -162,11 +162,11 @@ const ReviewsSection = () => {
 
         <div className="flex flex-col gap-4 max-w-4xl mx-auto">
           {currentReviews.map((review) => (
-            <Card key={review.id} className="p-6 hover:shadow-lg transition-shadow">
-              <div className="space-y-3">
+            <Card key={review.id} className="p-5 hover:shadow-lg transition-shadow">
+              <div className="space-y-2">
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="font-semibold text-lg">{review.author}</p>
+                    <p className="font-semibold text-base">{review.author}</p>
                     <div className="flex items-center gap-2 mt-1">
                       {review.verified && (
                         <span className="flex items-center gap-1 text-xs text-green-600">
@@ -181,20 +181,20 @@ const ReviewsSection = () => {
                   </div>
                   <div className="flex gap-0.5">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
+                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
                     ))}
                   </div>
                 </div>
 
-                <h4 className="font-bold text-lg">{review.title}</h4>
+                <h4 className="font-bold text-base">{review.title}</h4>
                 
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {review.content}
                 </p>
 
-                <div className="flex items-center gap-2 pt-2">
-                  <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-                    <ThumbsUp className="h-4 w-4" />
+                <div className="flex items-center gap-2 pt-1">
+                  <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
+                    <ThumbsUp className="h-3 w-3" />
                     Helpful ({review.helpful})
                   </button>
                 </div>
