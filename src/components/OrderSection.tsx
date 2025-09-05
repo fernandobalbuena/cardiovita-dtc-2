@@ -147,12 +147,22 @@ const OrderSection = () => {
               </div>
 
               {/* Buy Button */}
-              <Button 
-                size="lg" 
-                className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-base sm:text-lg py-5 sm:py-6"
+              <a 
+                href={
+                  currentPackage.id === "1" ? "https://ab.capillex.shop/click/1" :
+                  currentPackage.id === "3" ? "https://ab.capillex.shop/click/2" :
+                  "https://ab.capillex.shop/click/3"
+                }
+                className="block"
               >
-                Buy Now
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-base sm:text-lg py-5 sm:py-6"
+                  asChild
+                >
+                  <span>Buy Now</span>
+                </Button>
+              </a>
 
               {/* Reviews and Stock */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-2 mt-4">
