@@ -22,8 +22,7 @@ const TestimonialsSection = () => {
       location: "Texas",
       rating: 5,
       verified: true,
-      before: "/before-2.jpg",
-      after: "/after-2.jpg",
+      beforeAfterImage: "/lovable-uploads/cb7c110a-a035-4344-9a00-c44efe4d90d3.png",
       title: "Finally Found Something That Works",
       content: "I was skeptical at first, but this product delivered beyond my expectations. The puffiness in my face is gone, and I have so much more energy throughout the day.",
       date: "1 month ago"
