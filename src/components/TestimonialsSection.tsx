@@ -34,8 +34,7 @@ const TestimonialsSection = () => {
       location: "Florida",
       rating: 5,
       verified: true,
-      before: "/before-3.jpg",
-      after: "/after-3.jpg",
+      beforeAfterImage: "/lovable-uploads/2c0577dd-41a5-409d-9247-6e44eced6352.png",
       title: "Incredible Transformation",
       content: "Not only did this help with my water retention, but my immune system feels stronger than ever. I haven't been sick once since starting this supplement 3 months ago!",
       date: "1 month ago"
