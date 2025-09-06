@@ -10,8 +10,7 @@ const TestimonialsSection = () => {
       location: "California",
       rating: 5,
       verified: true,
-      before: "/before-1.jpg",
-      after: "/after-1.jpg",
+      beforeAfterImage: "/lovable-uploads/45d36862-85a4-4994-ae84-8ba740ea91a6.png",
       title: "Life-Changing Results!",
       content: "I've struggled with swelling in my legs for years. After just 3 weeks of taking Cardiovita, the difference is incredible. My ankles are back to normal size and I feel so much lighter!",
       date: "2 weeks ago"
@@ -80,6 +79,16 @@ const TestimonialsSection = () => {
                     <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
                   ))}
                 </div>
+
+                {testimonial.beforeAfterImage && (
+                  <div className="w-full">
+                    <img 
+                      src={testimonial.beforeAfterImage} 
+                      alt={`${testimonial.name}'s before and after results`}
+                      className="w-full rounded-lg object-cover"
+                    />
+                  </div>
+                )}
 
                 <div>
                   <h4 className="font-bold mb-2">{testimonial.title}</h4>
