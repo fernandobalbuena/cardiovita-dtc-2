@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
                     <img 
                       src={testimonial.beforeAfterImage} 
                       alt={`${testimonial.name}'s before and after results`}
-                      className="w-full rounded-lg object-cover"
+                      className="w-full h-48 rounded-lg object-cover object-center"
                     />
                   </div>
                 )}
