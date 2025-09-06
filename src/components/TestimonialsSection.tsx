@@ -79,12 +79,22 @@ const TestimonialsSection = () => {
                 </div>
 
                 {testimonial.beforeAfterImage && (
-                  <div className="w-full">
+                  <div className="relative w-full">
                     <img 
                       src={testimonial.beforeAfterImage} 
                       alt={`${testimonial.name}'s before and after results`}
                       className="w-full h-48 rounded-lg object-cover object-center"
                     />
+                    <div className="absolute top-2 left-2 flex gap-2">
+                      <span className="bg-background text-foreground px-3 py-1 rounded font-bold text-sm">
+                        BEFORE
+                      </span>
+                    </div>
+                    <div className="absolute top-2 right-2 flex gap-2">
+                      <span className="bg-background text-foreground px-3 py-1 rounded font-bold text-sm">
+                        AFTER
+                      </span>
+                    </div>
                   </div>
                 )}
 
