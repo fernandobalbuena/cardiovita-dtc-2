@@ -70,12 +70,12 @@ const OrderSection = () => {
         <div className="flex flex-col lg:flex-row justify-center gap-4 max-w-6xl mx-auto">
           
           {/* Center Box - Package Selection (First on mobile) */}
-          <div className={`rounded-lg border-2 shadow-lg overflow-hidden w-full lg:w-[400px] lg:order-2 transition-all duration-500 ${
+          <div className={`rounded-lg border-2 shadow-lg overflow-hidden w-full lg:w-[400px] lg:order-2 transition-all duration-300 ${
             selectedPackage === "6" 
-              ? "border-yellow-400 shadow-2xl ring-4 ring-yellow-400/50 animate-pulse" 
+              ? "border-yellow-400 shadow-2xl ring-4 ring-yellow-400/50 scale-[1.02]" 
               : "border-gray-300"
           }`}>
-            <div className={`text-white text-center py-4 px-6 transition-all duration-500 ${
+            <div className={`text-white text-center py-4 px-6 transition-all duration-300 ${
               selectedPackage === "6"
                 ? "bg-gradient-to-b from-yellow-500 via-yellow-600 to-yellow-700"
                 : "bg-gradient-to-b from-teal-600 to-teal-700"
@@ -83,9 +83,7 @@ const OrderSection = () => {
               <h3 className="text-xl font-bold">
                 {selectedPackage === "6" ? "🌟 BEST CHOICE - CHOOSE YOUR PACKAGE 🌟" : "CHOOSE YOUR PACKAGE"}
               </h3>
-              <p className="text-sm mt-1">
-                {selectedPackage === "6" ? "Doctor's recommended option!" : "Select one of the options"}
-              </p>
+              <p className="text-sm mt-1">Select one of the options</p>
             </div>
             <div className="bg-white p-4 sm:p-6">
               {/* Package Options */}
