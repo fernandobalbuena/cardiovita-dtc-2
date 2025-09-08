@@ -76,11 +76,6 @@ const ProductOptions = () => {
               }`}
               onClick={() => setSelectedOption(option.id)}
             >
-              {option.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-secondary text-white">
-                  MOST POPULAR
-                </Badge>
-              )}
 
               <div className="text-center space-y-4">
                 <h3 className="text-xl font-bold">{option.name}</h3>
@@ -109,9 +104,11 @@ const ProductOptions = () => {
                   <Badge variant="secondary" className="w-full">
                     Save ${option.savings}
                   </Badge>
-                  <p className="text-sm font-medium text-accent-secondary">
-                    {option.shipping}
-                  </p>
+                  {(option.bottles === 3 || option.bottles === 6) && (
+                    <Badge className="bg-accent-secondary text-white">
+                      FREE Shipping
+                    </Badge>
+                  )}
                 </div>
 
                 <div className="pt-4">
