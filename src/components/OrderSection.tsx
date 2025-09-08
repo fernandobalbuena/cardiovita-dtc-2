@@ -132,7 +132,7 @@ const OrderSection = () => {
 
               {/* Benefits */}
               <div className="space-y-2 mb-6">
-                <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.id === "3" || currentPackage.id === "6" ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
+                <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.id === "6" ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
                   <Check className="h-4 w-4 flex-shrink-0" />
                   <span className="text-xs sm:text-sm font-semibold">FREE HEALTH EXPERT CALL</span>
                 </div>
@@ -220,7 +220,7 @@ const OrderSection = () => {
                   <p className="text-sm text-gray-700 font-medium">
                     {currentPackage.bottles} {currentPackage.bottles === 1 ? 'Bottle' : 'Bottles'} of Cardiovita
                   </p>
-                  {(currentPackage.id === "6" || currentPackage.id === "3") && (
+                  {currentPackage.id === "6" && (
                     <p className="text-xs text-teal-600 mt-2">
                       + 2 FREE Bonus Books
                     </p>
