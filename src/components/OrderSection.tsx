@@ -81,7 +81,7 @@ const OrderSection = () => {
                 : "bg-gradient-to-b from-teal-600 to-teal-700"
             }`}>
               <h3 className="text-xl font-bold">
-                {selectedPackage === "6" ? "🌟 CHOOSE YOUR PACKAGE 🌟" : "CHOOSE YOUR PACKAGE"}
+                CHOOSE YOUR PACKAGE
               </h3>
               <p className="text-sm mt-1">Select one of the options</p>
             </div>
