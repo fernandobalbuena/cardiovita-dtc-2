@@ -132,14 +132,18 @@ const OrderSection = () => {
 
               {/* Benefits */}
               <div className="space-y-2 mb-6">
-                <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.id === "6" ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
-                  <Check className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm font-semibold">FREE HEALTH EXPERT CALL</span>
-                </div>
-                <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.id === "6" ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
-                  <Check className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm font-semibold">2 FREE BONUS BOOKS</span>
-                </div>
+                {currentPackage.id === "6" && (
+                  <>
+                    <div className="flex items-center gap-2 p-2 rounded bg-teal-500 text-white">
+                      <Check className="h-4 w-4 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm font-semibold">FREE HEALTH EXPERT CALL</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-2 rounded bg-teal-500 text-white">
+                      <Check className="h-4 w-4 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm font-semibold">2 FREE BONUS BOOKS</span>
+                    </div>
+                  </>
+                )}
                 <div className={`flex items-center gap-2 p-2 rounded ${currentPackage.freeShipping ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-500'}`}>
                   <Check className="h-4 w-4 flex-shrink-0" />
                   <span className="text-xs sm:text-sm font-semibold">FREE SHIPPING IN US</span>
