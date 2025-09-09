@@ -133,7 +133,7 @@ const OrderSection = () => {
               {/* Price Display */}
               <div className="text-center space-y-2 mb-6">
                 {currentPackage.supply && (
-                  <Badge variant="secondary" className="text-xs font-medium px-3 py-1 bg-gray-100 text-gray-700 border-gray-200">
+                  <Badge variant="secondary" className="text-xs font-bold px-3 py-1 bg-teal-50 text-teal-700 border-teal-200">
                     {currentPackage.supply}
                   </Badge>
                 )}
