@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Check, Star } from "lucide-react";
 
 interface PackageOption {
@@ -132,9 +133,9 @@ const OrderSection = () => {
               {/* Price Display */}
               <div className="text-center space-y-2 mb-6">
                 {currentPackage.supply && (
-                  <p className="text-sm font-semibold text-teal-600 uppercase">
+                  <Badge variant="secondary" className="text-xs font-medium px-3 py-1 bg-gray-100 text-gray-700 border-gray-200">
                     {currentPackage.supply}
-                  </p>
+                  </Badge>
                 )}
                 <p className="text-sm text-gray-600">
                   Regular Price: <span className="line-through">${currentPackage.regularPrice}</span>
