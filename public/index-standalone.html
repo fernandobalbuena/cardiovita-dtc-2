@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardiovita - #1 Rated Cardiovascular Support Formula</title>
-    <meta name="description" content="Support your heart's natural health system with Cardiovita. FDA Registered, GMP Certified, 180-day money-back guarantee. Save up to 50% today.">
+    <title>Cardiovita - Transform Your Heart Health</title>
+    <meta name="description" content="Cardiovita - Premium cardiovascular health supplement with natural ingredients. 180-day money back guarantee. Join 7,000+ satisfied customers.">
+    <link rel="icon" href="/favicon.ico">
+    
     <style>
         * {
             margin: 0;
@@ -13,36 +15,228 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #fff;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 16px;
         }
 
-        /* Order Section - IDÊNTICO AO REACT */
-        .order-section {
-            padding: 48px 0;
-            background: linear-gradient(to bottom, #fff, #f5f5f5);
-        }
-
-        .order-title {
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #00796b 0%, #004d40 100%);
+            color: white;
+            padding: 80px 0;
             text-align: center;
-            font-size: 32px;
+        }
+
+        .hero-title {
+            font-size: 48px;
             font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
             margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            background: #FFD700;
+            color: black;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: #FFC107;
+        }
+
+        /* Choose Your Package Section */
+        .package-section {
+            padding: 64px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto 32px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .package-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .package-card.selected {
+            border-color: #00796b;
+            box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2), 0 12px 24px rgba(0,0,0,0.15);
+            transform: scale(1.05);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #dc2626;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .package-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .package-bottles-img {
+            height: 120px;
+            object-fit: contain;
+            margin: 20px 0;
+            display: block;
+            width: 100%;
+        }
+
+        .package-price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        .package-original {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .package-per-bottle {
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .badge {
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 8px 0;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .badge-savings {
+            background: #e0f7fa;
+            color: #00796b;
+        }
+
+        .badge-shipping {
+            background: #ffebee;
+            color: #dc2626;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #00796b;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px auto 8px;
+        }
+
+        .package-rating {
+            color: #FFD700;
+            margin-top: 8px;
+        }
+
+        .btn-order {
+            background: #00796b;
+            color: white;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-order:hover {
+            background: #005a50;
+        }
+
+        .security-badges {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Order Section */
+        .order-section {
+            padding: 64px 0;
+            background: white;
         }
 
         .order-boxes {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            max-width: 1100px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -52,12 +246,12 @@
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .order-box.selected {
             border-color: #FFD700;
-            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.5), 0 10px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3), 0 10px 25px rgba(0,0,0,0.15);
             transform: scale(1.02);
         }
 
@@ -69,17 +263,12 @@
         }
 
         .order-box.selected .order-box-header {
-            background: linear-gradient(to bottom, #FFD700, #FFC107, #FFB300);
+            background: linear-gradient(to bottom, #FFD700, #FFC107);
         }
 
         .order-box-header h3 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
-        }
-
-        .order-box-header p {
-            font-size: 14px;
-            margin-top: 4px;
         }
 
         .order-box-content {
@@ -89,7 +278,7 @@
         .package-options {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 12px;
             margin-bottom: 24px;
         }
 
@@ -100,12 +289,8 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
-            min-width: 85px;
+            min-width: 75px;
             position: relative;
-        }
-
-        .package-option:hover {
-            border-color: #999;
         }
 
         .package-option.active {
@@ -113,32 +298,24 @@
             background: #e0f7fa;
         }
 
-        .package-option.popular {
-            padding: 16px 12px;
-        }
-
-        .popular-badge {
+        .doctor-choice-badge {
             position: absolute;
-            top: -12px;
+            top: -10px;
             left: 50%;
             transform: translateX(-50%);
             background: #FFD700;
             color: black;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
-            padding: 4px 8px;
+            padding: 2px 6px;
             border-radius: 4px;
             white-space: nowrap;
         }
 
         .bottle-count {
-            font-size: 30px;
+            font-size: 28px;
             font-weight: bold;
-            margin-top: 8px;
-        }
-
-        .package-option.popular .bottle-count {
-            font-size: 36px;
+            margin-top: 4px;
         }
 
         .price-display {
@@ -167,10 +344,6 @@
             color: #00796b;
             font-size: 24px;
             font-weight: bold;
-        }
-
-        .benefits-list {
-            margin-bottom: 24px;
         }
 
         .benefit-item {
@@ -210,98 +383,19 @@
             background: #FFC107;
         }
 
-        .product-image {
-            text-align: center;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-image img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-        }
-
-        .product-description {
-            background: #f5f5f5;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 16px;
-            text-align: center;
-        }
-
-        .product-description p {
-            font-weight: 500;
-            color: #333;
-            font-size: 14px;
-        }
-
-        .bonus-text {
-            color: #00796b;
-            font-size: 12px;
-            margin-top: 8px;
-        }
-
-        .guarantee-box img {
-            max-width: 240px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto 12px;
-            display: block;
-        }
-
-        .reviews-stock {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 16px;
-        }
-
-        .stars {
-            color: #FFD700;
-        }
-
         /* Trusted Section */
         .trusted-section {
-            background: #2B8B99;
-            padding: 48px 0 64px;
+            background: #00796b;
+            padding: 64px 0;
             text-align: center;
             color: white;
-            position: relative;
         }
 
-        .trusted-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            opacity: 0.1;
-            background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.3) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.2) 0%, transparent 50%),
-                              radial-gradient(circle at 40% 20%, rgba(255,255,255,0.2) 0%, transparent 40%);
-        }
-
-        .trusted-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .trusted-section h2 {
-            font-size: 24px;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .trusted-section .number {
+        .trusted-number {
             font-size: 48px;
             font-weight: bold;
             color: #FFD700;
-            margin-bottom: 12px;
-        }
-
-        .trusted-section .subtitle {
-            font-size: 20px;
+            margin: 16px 0;
         }
 
         .customers-image {
@@ -312,6 +406,7 @@
         .customers-image img {
             width: 100%;
             height: auto;
+            border-radius: 8px;
         }
 
         /* Testimonials Section */
@@ -320,28 +415,11 @@
             background: white;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 48px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -350,25 +428,7 @@
             padding: 24px;
             border-radius: 12px;
             border: 1px solid #e5e5e5;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .customer-info h4 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .customer-info span {
-            color: #666;
-            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .verified-badge {
@@ -378,32 +438,13 @@
             font-weight: 600;
             padding: 4px 8px;
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
         }
 
         .testimonial-rating {
             color: #FFD700;
             margin-bottom: 12px;
-        }
-
-        .testimonial-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        .testimonial-content {
-            color: #666;
-            line-height: 1.6;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        .testimonial-date {
-            color: #999;
-            font-size: 12px;
         }
 
         .before-after-image {
@@ -417,12 +458,12 @@
         /* Benefits Section */
         .benefits-section {
             padding: 64px 0;
-            background: #f9fafb;
+            background: #f8f9fa;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             max-width: 1000px;
             margin: 0 auto;
@@ -432,270 +473,70 @@
             background: white;
             padding: 32px;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
         }
 
         .benefit-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .benefit-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #00796b, #004d40);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            color: white;
-            font-size: 24px;
-        }
-
-        .benefit-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .benefit-card p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 14px;
+            font-size: 48px;
+            margin-bottom: 16px;
         }
 
         /* Ingredients Section */
         .ingredients-section {
             padding: 64px 0;
-            background: rgba(0, 121, 107, 0.05);
+            background: white;
         }
 
         .ingredients-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
-            max-width: 1100px;
-            margin: 0 auto 48px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .ingredient-card {
-            background: white;
+            background: #f8f9fa;
             padding: 24px;
             border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s;
-        }
-
-        .ingredient-card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .ingredient-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(0, 121, 107, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            color: #00796b;
-            font-size: 24px;
-        }
-
-        .ingredient-card h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .ingredient-benefit {
-            color: #00796b;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .ingredient-description {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .formula-card {
-            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-            padding: 32px;
-            border-radius: 12px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .formula-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            align-items: center;
-        }
-
-        .formula-list {
-            list-style: none;
-        }
-
-        .formula-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-
-        .formula-list .check {
-            color: #16a34a;
-            margin-top: 2px;
-        }
-
-        .formula-image {
-            text-align: center;
-        }
-
-        .formula-image img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         /* Reviews Section */
         .reviews-section {
             padding: 64px 0;
-            background: white;
-        }
-
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .average-rating {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 8px;
-        }
-
-        .rating-number {
-            font-size: 48px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .rating-stars {
-            color: #FFD700;
-            font-size: 24px;
+            background: #f8f9fa;
         }
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 1100px;
-            margin: 0 auto 32px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .review-card {
             background: white;
             padding: 24px;
-            border: 1px solid #e5e5e5;
             border-radius: 12px;
-        }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-
-        .review-author {
-            font-weight: 600;
-        }
-
-        .review-date {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .review-rating {
-            color: #FFD700;
-            margin-bottom: 8px;
-        }
-
-        .review-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .review-content {
-            color: #666;
-            line-height: 1.6;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        .review-helpful {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin-top: 32px;
-        }
-
-        .pagination button {
-            padding: 8px 12px;
-            border: 1px solid #e5e5e5;
-            background: white;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .pagination button:hover {
-            background: #f5f5f5;
-        }
-
-        .pagination button.active {
-            background: #00796b;
-            color: white;
-            border-color: #00796b;
-        }
-
-        .pagination button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         /* Guarantee Section */
         .guarantee-section {
             padding: 64px 0;
-            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            background: white;
         }
 
         .guarantee-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 16px;
             padding: 48px;
             max-width: 900px;
             margin: 0 auto;
@@ -704,30 +545,8 @@
         }
 
         .guarantee-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 193, 7, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            color: #FFC107;
-            font-size: 40px;
-        }
-
-        .guarantee-title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .guarantee-description {
-            font-size: 18px;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
+            font-size: 64px;
+            margin-bottom: 24px;
         }
 
         .guarantee-features {
@@ -737,43 +556,10 @@
             margin: 40px 0;
         }
 
-        .guarantee-feature {
-            text-align: center;
-        }
-
-        .guarantee-feature-icon {
-            color: #16a34a;
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .guarantee-feature h3 {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .guarantee-feature p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .satisfaction-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #00796b;
-            margin-top: 32px;
-        }
-
-        .customers-count {
-            color: #666;
-            font-size: 14px;
-            margin-top: 8px;
-        }
-
         /* FAQ Section */
         .faq-section {
             padding: 64px 0;
-            background: white;
+            background: #f8f9fa;
         }
 
         .faq-container {
@@ -783,10 +569,10 @@
 
         .faq-item {
             background: white;
-            border: 1px solid #e5e5e5;
             border-radius: 8px;
             margin-bottom: 16px;
             overflow: hidden;
+            border: 1px solid #e5e5e5;
         }
 
         .faq-question {
@@ -801,24 +587,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.2s;
-        }
-
-        .faq-question:hover {
-            background: #f5f5f5;
-        }
-
-        .faq-question.active {
-            background: #f5f5f5;
-        }
-
-        .faq-icon {
-            transition: transform 0.3s;
-            font-size: 20px;
-        }
-
-        .faq-question.active .faq-icon {
-            transform: rotate(180deg);
         }
 
         .faq-answer {
@@ -839,152 +607,133 @@
 
         /* Footer */
         .footer {
-            background: rgba(0,0,0,0.05);
+            background: #1a1a1a;
+            color: white;
             padding: 48px 0;
             text-align: center;
-            border-top: 1px solid #e5e5e5;
-        }
-
-        .footer p {
-            color: #666;
-            font-size: 14px;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .order-boxes {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .order-box {
-                width: 100%;
-                max-width: 400px;
-            }
-
-            .formula-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
-            .order-title {
-                font-size: 24px;
-                padding: 0 16px;
-            }
-
-            .package-options {
-                gap: 8px;
-            }
-
-            .package-option {
-                min-width: 70px;
-                padding: 8px;
-            }
-
-            .package-option.popular {
-                min-width: 85px;
-                padding: 12px 8px;
-            }
-
-            .bottle-count {
-                font-size: 24px;
-            }
-
-            .package-option.popular .bottle-count {
-                font-size: 30px;
-            }
-
-            .benefit-item {
-                font-size: 12px;
-                padding: 8px;
-            }
-
-            .btn-buy {
-                padding: 16px;
-                font-size: 16px;
-            }
-
+            .packages-grid,
+            .order-boxes,
             .testimonials-grid,
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .benefits-grid,
+            .reviews-grid,
             .guarantee-features {
                 grid-template-columns: 1fr;
-                gap: 24px;
             }
 
-            .trusted-section h2 {
-                font-size: 20px;
+            .hero-title {
+                font-size: 32px;
             }
 
-            .trusted-section .number {
-                font-size: 36px;
-            }
-
-            .trusted-section .subtitle {
+            .hero-subtitle {
                 font-size: 18px;
             }
-        }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
+            .ingredients-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Order Section -->
-    <section class="order-section" id="order">
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container">
-            <h2 class="order-title">Limited Time Offer on Cardiovita</h2>
+            <h1 class="hero-title">Transform Your Heart Health</h1>
+            <p class="hero-subtitle">Join 7,000+ People Who've Discovered the Secret to Better Cardiovascular Health</p>
+            <a href="#package" class="hero-cta">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Choose Your Package Section -->
+    <section class="package-section" id="package">
+        <div class="container">
+            <h2 class="section-title">Choose Your Package</h2>
+            <p class="section-subtitle">Save more when you order in bulk - 180 Day Money Back Guarantee</p>
+            
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card" onclick="selectPackage(1)">
+                    <div class="package-name">Basic Package</div>
+                    <img src="/bottle-1.png" alt="1 bottle" class="package-bottles-img">
+                    <div class="package-price">$69</div>
+                    <div class="package-original">$99</div>
+                    <div class="package-per-bottle">$69 per bottle</div>
+                    <div class="badge badge-savings">Save $30</div>
+                    <div class="package-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <!-- Package 2 - Most Popular -->
+                <div class="package-card selected" onclick="selectPackage(2)">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="package-name">Most Popular</div>
+                    <img src="/bottle-3.png" alt="3 bottles" class="package-bottles-img">
+                    <div class="package-price">$177</div>
+                    <div class="package-original">$297</div>
+                    <div class="package-per-bottle">$59 per bottle</div>
+                    <div class="badge badge-savings">Save $120</div>
+                    <div class="badge badge-shipping">FREE Shipping</div>
+                    <div class="check-icon">✓</div>
+                    <div class="package-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <!-- Package 3 - Best Value -->
+                <div class="package-card" onclick="selectPackage(3)">
+                    <div class="package-name">Best Value</div>
+                    <img src="/bottle-6.png" alt="6 bottles" class="package-bottles-img">
+                    <div class="package-price">$294</div>
+                    <div class="package-original">$594</div>
+                    <div class="package-per-bottle">$49 per bottle</div>
+                    <div class="badge badge-savings">Save $300</div>
+                    <div class="badge badge-shipping">FREE Shipping</div>
+                    <div class="package-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <button class="btn-order">Get Your Supply Now</button>
+            <div class="security-badges">
+                🔒 Secure checkout • 🔄 180-day guarantee • 📦 Fast shipping
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section">
+        <div class="container">
+            <h2 class="section-title">Limited Time Offer on Cardiovita</h2>
             
             <div class="order-boxes">
-                <!-- Guarantee Box (Left) -->
+                <!-- Guarantee Box -->
                 <div class="order-box">
                     <div class="order-box-header">
                         <h3>100% SATISFACTION GUARANTEE</h3>
                     </div>
                     <div class="order-box-content">
-                        <img src="/lovable-uploads/d9bff540-a356-4042-89df-d1ab12d89a1e.png" alt="365 days money back guarantee" class="guarantee-box">
-                        <p style="font-size: 14px; line-height: 1.6; color: #333;">You have <strong>365 days to try Cardiovita</strong> and see the results for yourself risk-free. If you are not 100% satisfied — simply contact us and we will gladly refund your money.</p>
+                        <img src="/lovable-uploads/d9bff540-a356-4042-89df-d1ab12d89a1e.png" alt="365 days money back guarantee" style="width: 100%; max-width: 240px;">
+                        <p style="font-size: 14px; line-height: 1.6; margin-top: 16px;">You have <strong>365 days to try Cardiovita</strong> and see the results for yourself risk-free.</p>
                     </div>
                 </div>
 
-                <!-- Package Selection Box (Center) -->
-                <div class="order-box selected" id="main-order-box">
+                <!-- Package Selection Box -->
+                <div class="order-box selected">
                     <div class="order-box-header">
                         <h3>CHOOSE YOUR PACKAGE</h3>
-                        <p>Select one of the options</p>
                     </div>
                     <div class="order-box-content">
                         <div class="package-options">
-                            <div class="package-option" onclick="selectPackage(2, event)">
+                            <div class="package-option" onclick="selectOrderPackage(2)">
                                 <div class="bottle-count">2</div>
                                 <div style="font-size: 12px;">bottles</div>
                             </div>
-                            <div class="package-option popular active" onclick="selectPackage(6, event)">
-                                <div class="popular-badge">DOCTOR'S CHOICE</div>
+                            <div class="package-option active" onclick="selectOrderPackage(6)" style="position: relative;">
+                                <div class="doctor-choice-badge">DOCTOR'S CHOICE</div>
                                 <div class="bottle-count">6</div>
-                                <div style="font-size: 14px;">bottles</div>
+                                <div style="font-size: 12px;">bottles</div>
                             </div>
-                            <div class="package-option" onclick="selectPackage(3, event)">
+                            <div class="package-option" onclick="selectOrderPackage(3)">
                                 <div class="bottle-count">3</div>
                                 <div style="font-size: 12px;">bottles</div>
                             </div>
@@ -997,11 +746,11 @@
                         </div>
 
                         <div class="benefits-list">
-                            <div class="benefit-item" id="bonus1">
+                            <div class="benefit-item">
                                 <span>✓</span>
                                 <span>FREE HEALTH EXPERT CALL</span>
                             </div>
-                            <div class="benefit-item" id="bonus2">
+                            <div class="benefit-item">
                                 <span>✓</span>
                                 <span>2 FREE BONUS BOOKS</span>
                             </div>
@@ -1011,11 +760,11 @@
                             </div>
                         </div>
 
-                        <a href="https://ab.capillex.shop/click/3" id="buy-link" class="btn-buy">Buy Now</a>
+                        <a href="https://ab.capillex.shop/click/3" class="btn-buy">Buy Now</a>
 
-                        <div class="reviews-stock">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
                             <div>
-                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
                                 <span style="font-size: 14px; color: #666; margin-left: 4px;">179 reviews</span>
                             </div>
                             <span style="color: #16a34a; font-size: 14px; font-weight: 500;">✓ In Stock</span>
@@ -1023,36 +772,29 @@
                     </div>
                 </div>
 
-                <!-- What's Included Box (Right) -->
+                <!-- What's Included Box -->
                 <div class="order-box">
                     <div class="order-box-header">
                         <h3>INCLUDED</h3>
                     </div>
-                    <div class="order-box-content">
-                        <div class="product-image">
-                            <img id="product-image" src="/lovable-uploads/974f6048-6484-442a-954e-429f4b6ff4ea.png" alt="6 bottles of Cardiovita">
-                        </div>
-                        <div class="product-description">
-                            <p id="product-description">6 Bottles of Cardiovita</p>
-                            <p class="bonus-text" id="bonus-text">+ 2 FREE Bonus Books</p>
+                    <div class="order-box-content" style="text-align: center;">
+                        <img id="product-image" src="/lovable-uploads/974f6048-6484-442a-954e-429f4b6ff4ea.png" alt="6 bottles of Cardiovita" style="height: 200px; object-fit: contain;">
+                        <div style="background: #f5f5f5; padding: 12px; border-radius: 8px; margin-top: 16px;">
+                            <p id="product-description" style="font-weight: 500;">6 Bottles of Cardiovita</p>
+                            <p id="bonus-text" style="color: #00796b; font-size: 12px; margin-top: 8px;">+ 2 FREE Bonus Books</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <p style="text-align: center; margin-top: 32px; color: #666;">
-                Trusted by many, Cardiovita contributes to our total of 
-                <strong style="color: #00796b;">7,000+ satisfied customers</strong>
-            </p>
         </div>
     </section>
 
     <!-- Trusted Section -->
     <section class="trusted-section">
-        <div class="container trusted-content">
-            <h2>Trusted by many. Cardiovita contributes to our total of</h2>
-            <p class="number">100,125+ bottles sold,</p>
-            <p class="subtitle">supporting your cardiovascular health.</p>
+        <div class="container">
+            <h2 style="font-size: 24px; margin-bottom: 16px;">Trusted by many. Cardiovita contributes to our total of</h2>
+            <p class="trusted-number">100,125+ bottles sold,</p>
+            <p style="font-size: 20px;">supporting your cardiovascular health.</p>
             
             <div class="customers-image">
                 <img src="/assets/customers-collage.png" alt="Actual Customer Photos">
@@ -1069,56 +811,32 @@
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="customer-info">
-                            <h4>John Smith</h4>
-                            <span>Age 62 • Los Angeles, CA</span>
-                        </div>
-                        <div class="verified-badge">
-                            <span>✓</span>
-                            <span>Verified</span>
-                        </div>
-                    </div>
+                    <div class="verified-badge">✓ Verified</div>
+                    <h4 style="margin-bottom: 8px;">John Smith</h4>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 12px;">Age 62 • Los Angeles, CA</p>
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                     <img src="/before-1.jpg" alt="Before and After" class="before-after-image">
-                    <p class="testimonial-title">Life-Changing Results!</p>
-                    <p class="testimonial-content">After just 3 months of taking Cardiovita, my energy levels have improved dramatically. I feel like I'm in my 40s again! My doctor is impressed with my latest test results.</p>
-                    <p class="testimonial-date">2 weeks ago</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;">Life-Changing Results!</p>
+                    <p style="color: #666; line-height: 1.6;">After just 3 months of taking Cardiovita, my energy levels have improved dramatically. I feel like I'm in my 40s again!</p>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="customer-info">
-                            <h4>Patricia Johnson</h4>
-                            <span>Age 58 • New York, NY</span>
-                        </div>
-                        <div class="verified-badge">
-                            <span>✓</span>
-                            <span>Verified</span>
-                        </div>
-                    </div>
+                    <div class="verified-badge">✓ Verified</div>
+                    <h4 style="margin-bottom: 8px;">Patricia Johnson</h4>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 12px;">Age 58 • New York, NY</p>
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                     <img src="/after-1.jpg" alt="Before and After" class="before-after-image">
-                    <p class="testimonial-title">Finally Found What Works</p>
-                    <p class="testimonial-content">I've tried many supplements, but Cardiovita is the only one that has made a real difference. I have more energy, better circulation, and I just feel healthier overall.</p>
-                    <p class="testimonial-date">1 month ago</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;">Finally Found What Works</p>
+                    <p style="color: #666; line-height: 1.6;">I've tried many supplements, but Cardiovita is the only one that has made a real difference.</p>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="customer-info">
-                            <h4>Robert Davis</h4>
-                            <span>Age 55 • Houston, TX</span>
-                        </div>
-                        <div class="verified-badge">
-                            <span>✓</span>
-                            <span>Verified</span>
-                        </div>
-                    </div>
+                    <div class="verified-badge">✓ Verified</div>
+                    <h4 style="margin-bottom: 8px;">Robert Davis</h4>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 12px;">Age 55 • Houston, TX</p>
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-title">Excellent Product!</p>
-                    <p class="testimonial-content">Started taking Cardiovita 6 months ago and the difference is remarkable. My stamina has improved, and I no longer feel tired in the afternoons. Highly recommend!</p>
-                    <p class="testimonial-date">3 weeks ago</p>
+                    <p style="font-weight: 600; margin-bottom: 8px;">Excellent Product!</p>
+                    <p style="color: #666; line-height: 1.6;">Started taking Cardiovita 6 months ago and the difference is remarkable. My stamina has improved!</p>
                 </div>
             </div>
         </div>
@@ -1128,38 +846,38 @@
     <section class="benefits-section">
         <div class="container">
             <h2 class="section-title">Why Choose Cardiovita?</h2>
-            <p class="section-subtitle">Our scientifically-formulated blend supports your cardiovascular system with proven ingredients</p>
+            <p class="section-subtitle">Our scientifically-formulated blend supports your cardiovascular system</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">❤️</div>
                     <h3>Heart Health Support</h3>
-                    <p>Helps maintain healthy blood pressure levels already within normal range and supports overall cardiovascular function.</p>
+                    <p>Helps maintain healthy blood pressure levels and supports overall cardiovascular function.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🔄</div>
                     <h3>Enhanced Circulation</h3>
-                    <p>Promotes healthy blood flow throughout your body, supporting oxygen and nutrient delivery to vital organs.</p>
+                    <p>Promotes healthy blood flow throughout your body, supporting oxygen delivery.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">⚡</div>
                     <h3>Energy & Vitality</h3>
-                    <p>Experience improved energy levels and reduced fatigue as your cardiovascular system functions optimally.</p>
+                    <p>Experience improved energy levels and reduced fatigue.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🛡️</div>
                     <h3>Antioxidant Protection</h3>
-                    <p>Powerful antioxidants help protect your heart and blood vessels from oxidative stress and free radical damage.</p>
+                    <p>Powerful antioxidants help protect your heart from oxidative stress.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">💊</div>
                     <h3>Cholesterol Balance</h3>
-                    <p>Supports healthy cholesterol levels already within the normal range, promoting optimal cardiovascular health.</p>
+                    <p>Supports healthy cholesterol levels within the normal range.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">💪</div>
                     <h3>Muscle Function</h3>
-                    <p>Supports healthy muscle function including your heart muscle, the most important muscle in your body.</p>
+                    <p>Supports healthy muscle function including your heart muscle.</p>
                 </div>
             </div>
         </div>
@@ -1169,62 +887,39 @@
     <section class="ingredients-section">
         <div class="container">
             <h2 class="section-title">An Elite Team of 'Heroes' For Your Health</h2>
-            <p class="section-subtitle">Each 'hero' was personally selected by Dr. Weil for a specific, vital mission in the battle against swelling</p>
+            <p class="section-subtitle">Each ingredient was personally selected for a specific, vital mission</p>
             
             <div class="ingredients-grid">
                 <div class="ingredient-card">
-                    <div class="ingredient-icon">🧪</div>
-                    <h3>Coumarin (from Citrus Extract)</h3>
-                    <p class="ingredient-benefit">The 'Roto-Rooter' for Your System</p>
-                    <p class="ingredient-description">This powerhouse compound, validated by a landmark New England Journal of Medicine study, helps blast through lymphatic clogs, clearing the primary blockage</p>
+                    <h3 style="margin-bottom: 8px;">Coumarin (from Citrus Extract)</h3>
+                    <p style="color: #00796b; font-weight: 600; margin-bottom: 8px;">The 'Roto-Rooter' for Your System</p>
+                    <p style="color: #666;">This powerhouse compound helps blast through lymphatic clogs, clearing the primary blockage.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-icon">🍍</div>
-                    <h3>Bromelain (from Pineapple Core)</h3>
-                    <p class="ingredient-benefit">The 'Demolition Crew' for Sludge</p>
-                    <p class="ingredient-description">A potent enzyme that acts like a microscopic demolition army, dissolving the thick, sticky, protein-heavy 'bio-sludge' that paralyzes your lymphatic flow</p>
+                    <h3 style="margin-bottom: 8px;">Bromelain (from Pineapple Core)</h3>
+                    <p style="color: #00796b; font-weight: 600; margin-bottom: 8px;">The 'Demolition Crew' for Sludge</p>
+                    <p style="color: #666;">A potent enzyme that dissolves the thick, sticky 'bio-sludge' that paralyzes your lymphatic flow.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-icon">🌊</div>
-                    <h3>Okinawan Kelp</h3>
-                    <p class="ingredient-benefit">The 'Guardian' of the Balance</p>
-                    <p class="ingredient-description">Restores the vital electrolytes (like potassium) that conventional diuretics strip away, while its Fucoxanthin content helps break down fatty deposits in the vessels</p>
+                    <h3 style="margin-bottom: 8px;">Okinawan Kelp</h3>
+                    <p style="color: #00796b; font-weight: 600; margin-bottom: 8px;">The 'Guardian' of the Balance</p>
+                    <p style="color: #666;">Restores vital electrolytes while its Fucoxanthin content helps break down fatty deposits.</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-icon">🌻</div>
-                    <h3>Dandelion Root</h3>
-                    <p class="ingredient-benefit">The 'Smart' Final Flush</p>
-                    <p class="ingredient-description">A natural diuretic revered by our ancestors. It gently helps flush the dislodged toxic waste out of your system while simultaneously replenishing vital potassium—unlike harsh pharmaceutical drugs</p>
+                    <h3 style="margin-bottom: 8px;">Dandelion Root</h3>
+                    <p style="color: #00796b; font-weight: 600; margin-bottom: 8px;">The 'Smart' Final Flush</p>
+                    <p style="color: #666;">A natural diuretic that gently helps flush dislodged toxic waste while replenishing vital potassium.</p>
                 </div>
             </div>
 
-            <div class="formula-card">
-                <div class="formula-content">
-                    <div>
-                        <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 16px;">Why Our Formula Is Different</h3>
-                        <ul class="formula-list">
-                            <li>
-                                <span class="check">✓</span>
-                                <span>100% Natural, Non-GMO ingredients</span>
-                            </li>
-                            <li>
-                                <span class="check">✓</span>
-                                <span>Manufactured in FDA-registered facility</span>
-                            </li>
-                            <li>
-                                <span class="check">✓</span>
-                                <span>Third-party tested for purity</span>
-                            </li>
-                            <li>
-                                <span class="check">✓</span>
-                                <span>No artificial fillers or preservatives</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="formula-image">
-                        <img src="/lovable-uploads/96dbcdd0-c5f1-409f-a392-3c679c641a2a.png" alt="Cardiovita founders holding product">
-                    </div>
-                </div>
+            <div style="background: #f8f9fa; padding: 32px; border-radius: 12px; margin-top: 48px;">
+                <h3 style="font-size: 24px; margin-bottom: 16px;">Why Our Formula Is Different</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 12px;"><span style="color: #16a34a; font-weight: bold;">✓</span> 100% Natural, Non-GMO ingredients</li>
+                    <li style="margin-bottom: 12px;"><span style="color: #16a34a; font-weight: bold;">✓</span> Manufactured in FDA-registered facility</li>
+                    <li style="margin-bottom: 12px;"><span style="color: #16a34a; font-weight: bold;">✓</span> Third-party tested for purity</li>
+                    <li><span style="color: #16a34a; font-weight: bold;">✓</span> No artificial fillers or preservatives</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1232,21 +927,15 @@
     <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="container">
-            <div class="reviews-header">
-                <h2 class="section-title">Customer Reviews</h2>
-                <div class="average-rating">
-                    <span class="rating-number">4.9</span>
-                    <span class="rating-stars">⭐⭐⭐⭐⭐</span>
-                </div>
-                <p style="color: #666; margin-bottom: 32px;">Based on 179 verified purchases</p>
+            <h2 class="section-title">Customer Reviews</h2>
+            <div style="text-align: center; margin-bottom: 32px;">
+                <span style="font-size: 48px; font-weight: bold;">4.9</span>
+                <span style="color: #FFD700; margin-left: 16px;">⭐⭐⭐⭐⭐</span>
+                <p style="color: #666; margin-top: 8px;">Based on 179 verified purchases</p>
             </div>
             
-            <div class="reviews-grid" id="reviews-container">
-                <!-- Reviews will be loaded here -->
-            </div>
-
-            <div class="pagination" id="pagination">
-                <!-- Pagination will be loaded here -->
+            <div class="reviews-grid" id="reviews-grid">
+                <!-- Reviews will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -1256,32 +945,32 @@
         <div class="container">
             <div class="guarantee-card">
                 <div class="guarantee-icon">🛡️</div>
-                <h2 class="guarantee-title">180-Day Money Back Guarantee</h2>
-                <p class="guarantee-description">
+                <h2 style="font-size: 36px; font-weight: bold; margin-bottom: 20px;">180-Day Money Back Guarantee</h2>
+                <p style="font-size: 18px; color: #666; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
                     We're so confident in Cardiovita that we offer an industry-leading 180-day money-back guarantee. 
                     If you're not completely satisfied with your results, simply return the product for a full refund - no questions asked.
                 </p>
                 
                 <div class="guarantee-features">
-                    <div class="guarantee-feature">
-                        <div class="guarantee-feature-icon">✓</div>
+                    <div>
+                        <div style="color: #16a34a; font-size: 32px; margin-bottom: 8px;">✓</div>
                         <h3>Risk-Free Trial</h3>
-                        <p>Try it for 6 full months</p>
+                        <p style="color: #666;">Try it for 6 full months</p>
                     </div>
-                    <div class="guarantee-feature">
-                        <div class="guarantee-feature-icon">✓</div>
+                    <div>
+                        <div style="color: #16a34a; font-size: 32px; margin-bottom: 8px;">✓</div>
                         <h3>No Questions Asked</h3>
-                        <p>Simple return process</p>
+                        <p style="color: #666;">Simple return process</p>
                     </div>
-                    <div class="guarantee-feature">
-                        <div class="guarantee-feature-icon">✓</div>
+                    <div>
+                        <div style="color: #16a34a; font-size: 32px; margin-bottom: 8px;">✓</div>
                         <h3>100% Refund</h3>
-                        <p>Every penny back</p>
+                        <p style="color: #666;">Every penny back</p>
                     </div>
                 </div>
                 
-                <p class="satisfaction-text">Your Satisfaction Is Our #1 Priority</p>
-                <p class="customers-count">Join over 7,000+ satisfied customers worldwide</p>
+                <p style="font-size: 24px; font-weight: bold; color: #00796b; margin-top: 32px;">Your Satisfaction Is Our #1 Priority</p>
+                <p style="color: #666; font-size: 14px; margin-top: 8px;">Join over 7,000+ satisfied customers worldwide</p>
             </div>
         </div>
     </section>
@@ -1296,11 +985,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>How does Cardiovita work?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Cardiovita works by combining powerful natural ingredients that help support cardiovascular health, improve blood circulation, and support your body's natural cardiovascular processes. The formula targets the root causes of cardiovascular issues to provide comprehensive support.
+                            Cardiovita works by combining powerful natural ingredients that help support cardiovascular health, improve blood circulation, and support your body's natural cardiovascular processes.
                         </div>
                     </div>
                 </div>
@@ -1308,11 +997,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>How long before I see results?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Most customers report noticeable improvements within 2-3 weeks of consistent use. However, for optimal results, we recommend taking Cardiovita for at least 3 months to allow your body to fully benefit from the formula.
+                            Most customers report noticeable improvements within 2-3 weeks of consistent use. However, for optimal results, we recommend taking Cardiovita for at least 3 months.
                         </div>
                     </div>
                 </div>
@@ -1320,11 +1009,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>Is Cardiovita safe?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Yes! Cardiovita is manufactured in an FDA-registered, GMP-certified facility in the USA. All ingredients are natural, non-GMO, and thoroughly tested for purity and potency. However, we always recommend consulting with your healthcare provider before starting any new supplement.
+                            Yes! Cardiovita is manufactured in an FDA-registered, GMP-certified facility in the USA. All ingredients are natural, non-GMO, and thoroughly tested for purity and potency.
                         </div>
                     </div>
                 </div>
@@ -1332,11 +1021,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>How many bottles should I order?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            We recommend ordering at least 3 bottles for a 90-day supply to see significant results. Many customers order 6 bottles to take advantage of our best pricing and to ensure they don't run out during their transformation journey.
+                            We recommend ordering at least 3 bottles for a 90-day supply to see significant results. Many customers order 6 bottles to take advantage of our best pricing.
                         </div>
                     </div>
                 </div>
@@ -1344,11 +1033,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>What if it doesn't work for me?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            We're confident you'll love Cardiovita, but if for any reason you're not satisfied, we offer a 180-day money-back guarantee. Simply return the product (even empty bottles) for a full refund, no questions asked.
+                            We're confident you'll love Cardiovita, but if for any reason you're not satisfied, we offer a 180-day money-back guarantee. Simply return the product for a full refund.
                         </div>
                     </div>
                 </div>
@@ -1356,11 +1045,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>How do I take Cardiovita?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Take 2 capsules daily with a glass of water, preferably with a meal. For best results, take consistently at the same time each day and maintain proper hydration throughout the day.
+                            Take 2 capsules daily with a glass of water, preferably with a meal. For best results, take consistently at the same time each day.
                         </div>
                     </div>
                 </div>
@@ -1368,11 +1057,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>Are there any side effects?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Cardiovita is made with natural ingredients and is generally well-tolerated. Some users may experience mild adjustment symptoms initially as their body adjusts. These typically subside within a few days.
+                            Cardiovita is made with natural ingredients and is generally well-tolerated. Some users may experience mild adjustment symptoms initially as their body adjusts.
                         </div>
                     </div>
                 </div>
@@ -1380,11 +1069,11 @@
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span>Can I take this with other medications?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            While Cardiovita is natural and safe, we recommend consulting with your healthcare provider before taking it alongside other medications to ensure there are no interactions.
+                            While Cardiovita is natural and safe, we recommend consulting with your healthcare provider before taking it alongside other medications.
                         </div>
                     </div>
                 </div>
@@ -1396,293 +1085,185 @@
     <footer class="footer">
         <div class="container">
             <p>© 2024 Cardiovita. All rights reserved.</p>
+            <p style="margin-top: 16px; font-size: 14px;">
+                <a href="#" style="color: white; text-decoration: none; margin: 0 12px;">Privacy Policy</a>
+                <a href="#" style="color: white; text-decoration: none; margin: 0 12px;">Terms of Service</a>
+                <a href="#" style="color: white; text-decoration: none; margin: 0 12px;">Contact Us</a>
+            </p>
         </div>
     </footer>
 
     <script>
-        // Package selection functionality
-        const packages = {
-            2: {
-                regularPrice: '$158',
-                savings: null,
-                perBottle: '79',
-                link: 'https://ab.capillex.shop/click/1',
-                image: '/lovable-uploads/978a2a68-1aed-4848-91b1-7185910a849b.png',
-                description: '2 Bottles of Cardiovita',
-                showBonuses: false
-            },
-            3: {
-                regularPrice: '$279',
-                savings: 'YOU SAVE: $72',
-                perBottle: '69',
-                link: 'https://ab.capillex.shop/click/2',
-                image: '/lovable-uploads/b2e2323f-5669-4dc7-839b-7e9e640a43c2.png',
-                description: '3 Bottles of Cardiovita',
-                showBonuses: false
-            },
-            6: {
-                regularPrice: '$474',
-                savings: 'YOU SAVE: $180',
-                perBottle: '49',
-                link: 'https://ab.capillex.shop/click/3',
-                image: '/lovable-uploads/974f6048-6484-442a-954e-429f4b6ff4ea.png',
-                description: '6 Bottles of Cardiovita',
-                showBonuses: true
-            }
-        };
-
-        let currentPackage = 6;
-
-        function selectPackage(bottles, event) {
-            currentPackage = bottles;
-            const pkg = packages[bottles];
+        // Package Selection
+        function selectPackage(id) {
+            const cards = document.querySelectorAll('.package-card');
+            cards.forEach(card => card.classList.remove('selected'));
             
-            // Update package options visual state
-            document.querySelectorAll('.package-option').forEach(opt => {
-                opt.classList.remove('active');
+            if (id === 1) {
+                cards[0].classList.add('selected');
+            } else if (id === 2) {
+                cards[1].classList.add('selected');
+            } else if (id === 3) {
+                cards[2].classList.add('selected');
+            }
+            
+            // Remove check icons
+            document.querySelectorAll('.check-icon').forEach(icon => {
+                if (!icon.parentElement.classList.contains('selected')) {
+                    icon.style.display = 'none';
+                }
             });
-            event.currentTarget.classList.add('active');
             
-            // Update price display
-            document.getElementById('regular-price').textContent = pkg.regularPrice;
-            if (pkg.savings) {
-                document.getElementById('savings').textContent = pkg.savings;
-                document.getElementById('savings').style.display = 'block';
-            } else {
-                document.getElementById('savings').style.display = 'none';
+            // Add check icon to selected
+            const selectedCard = document.querySelector('.package-card.selected');
+            let checkIcon = selectedCard.querySelector('.check-icon');
+            if (!checkIcon) {
+                checkIcon = document.createElement('div');
+                checkIcon.className = 'check-icon';
+                checkIcon.innerHTML = '✓';
+                selectedCard.insertBefore(checkIcon, selectedCard.querySelector('.package-rating'));
             }
-            document.getElementById('per-bottle').textContent = pkg.perBottle;
+            checkIcon.style.display = 'inline-flex';
+        }
+
+        // Order Section Package Selection
+        function selectOrderPackage(bottles) {
+            const options = document.querySelectorAll('.package-option');
+            options.forEach(opt => opt.classList.remove('active'));
             
-            // Update buy link
-            document.getElementById('buy-link').href = pkg.link;
+            let selectedIndex;
+            if (bottles === 2) selectedIndex = 0;
+            else if (bottles === 6) selectedIndex = 1;
+            else if (bottles === 3) selectedIndex = 2;
+            
+            options[selectedIndex].classList.add('active');
+            
+            // Update pricing
+            const prices = {
+                2: { regular: 158, save: 60, perBottle: 79 },
+                3: { regular: 237, save: 90, perBottle: 79 },
+                6: { regular: 474, save: 180, perBottle: 49 }
+            };
+            
+            document.getElementById('regular-price').textContent = '$' + prices[bottles].regular;
+            document.getElementById('savings').textContent = 'YOU SAVE: $' + prices[bottles].save;
+            document.getElementById('per-bottle').textContent = prices[bottles].perBottle;
             
             // Update product image and description
-            document.getElementById('product-image').src = pkg.image;
-            document.getElementById('product-image').alt = pkg.description;
-            document.getElementById('product-description').textContent = pkg.description;
+            const productImage = document.getElementById('product-image');
+            const productDesc = document.getElementById('product-description');
+            const bonusText = document.getElementById('bonus-text');
             
-            // Update bonuses
-            if (pkg.showBonuses) {
-                document.getElementById('bonus1').style.display = 'flex';
-                document.getElementById('bonus2').style.display = 'flex';
-                document.getElementById('bonus-text').style.display = 'block';
-                document.getElementById('main-order-box').classList.add('selected');
+            if (bottles === 2) {
+                productImage.src = '/lovable-uploads/cb7c110a-a035-4344-9a00-c44efe4d90d3.png';
+                productDesc.textContent = '2 Bottles of Cardiovita';
+                bonusText.style.display = 'none';
+            } else if (bottles === 3) {
+                productImage.src = '/lovable-uploads/2c0577dd-41a5-409d-9247-6e44eced6352.png';
+                productDesc.textContent = '3 Bottles of Cardiovita';
+                bonusText.style.display = 'none';
             } else {
-                document.getElementById('bonus1').style.display = 'none';
-                document.getElementById('bonus2').style.display = 'none';
-                document.getElementById('bonus-text').style.display = 'none';
-                document.getElementById('main-order-box').classList.remove('selected');
+                productImage.src = '/lovable-uploads/974f6048-6484-442a-954e-429f4b6ff4ea.png';
+                productDesc.textContent = '6 Bottles of Cardiovita';
+                bonusText.style.display = 'block';
             }
         }
 
-        // Reviews data
-        const allReviews = [
-            {
-                author: "Margaret S.",
-                rating: 5,
-                date: "2 days ago",
-                verified: true,
-                helpful: 89,
-                title: "My 'alligator skin' is gone!",
-                content: "Forget the swelling for a second—the ugly, scaly 'alligator skin' on my shins is completely GONE. My skin is smooth again for the first time in I don't know how long. Unbelievable."
-            },
-            {
-                author: "Jennifer R.",
-                rating: 5,
-                date: "5 days ago",
-                verified: true,
-                helpful: 156,
-                title: "Finally, the REAL answer. I can see my ankles again.",
-                content: "I was so skeptical. For years, doctors fed me the same 'poor circulation' line and sent me home with diuretics that just made me feel weak. When I watched Dr. Weil's presentation and he explained the 'lymphatic swamp,' it was like a lightbulb went on."
-            },
-            {
-                author: "David K.",
-                rating: 5,
-                date: "1 week ago",
-                verified: true,
-                helpful: 67,
-                title: "Felt the difference in 48 hours.",
-                content: "I was a total skeptic, but I felt a difference in 48 hours. The painful pressure in my legs just... released. Today I'm wearing shoes I haven't been able to fit into for 10 years. Don't wait to try this."
-            },
-            {
-                author: "Stephen M.",
-                rating: 5,
-                date: "1 week ago",
-                verified: true,
-                helpful: 234,
-                title: "Worth every penny—it REALLY works.",
-                content: "My swelling was so bad I could barely walk by dinnertime. Now? I can wear normal shoes again, and I even went for a 2-mile walk yesterday. My wife is stunned. This is the real deal."
-            },
-            {
-                author: "Sandra L.",
-                rating: 5,
-                date: "2 weeks ago",
-                verified: true,
-                helpful: 78,
-                title: "Can't believe how quickly it worked!",
-                content: "The swelling in my legs started going down within days. I'm back to wearing my favorite shoes and feeling like myself again. Thank you, Dr. Weil!"
-            },
-            {
-                author: "Michael R.",
-                rating: 5,
-                date: "2 weeks ago",
-                verified: true,
-                helpful: 145,
-                title: "Game changer for my health",
-                content: "I've struggled with cardiovascular issues for years. After 3 months on Cardiovita, my doctor is amazed at my improvement. Energy is through the roof!"
-            },
-            {
-                author: "Barbara K.",
-                rating: 5,
-                date: "3 weeks ago",
-                verified: true,
-                helpful: 92,
-                title: "Finally found relief",
-                content: "The constant discomfort and swelling are gone. I can enjoy activities with my grandkids again. This product has given me my life back."
-            },
-            {
-                author: "Thomas H.",
-                rating: 5,
-                date: "3 weeks ago",
-                verified: true,
-                helpful: 167,
-                title: "Exceeded all expectations",
-                content: "Not only did the swelling disappear, but my energy levels are better than they've been in decades. I feel 20 years younger!"
-            }
-        ];
-
-        let currentPage = 1;
-        const reviewsPerPage = 4;
-
-        function renderReviews() {
-            const startIndex = (currentPage - 1) * reviewsPerPage;
-            const endIndex = startIndex + reviewsPerPage;
-            const currentReviews = allReviews.slice(startIndex, endIndex);
-            
-            const reviewsContainer = document.getElementById('reviews-container');
-            reviewsContainer.innerHTML = currentReviews.map(review => `
-                <div class="review-card">
-                    <div class="review-header">
-                        <span class="review-author">${review.author}</span>
-                        <span class="review-date">${review.date}</span>
-                    </div>
-                    ${review.verified ? '<div class="verified-badge" style="display: inline-flex; align-items: center; gap: 4px; background: #dcfce7; color: #16a34a; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;"><span>✓</span><span>Verified Purchase</span></div>' : ''}
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="review-title">${review.title}</p>
-                    <p class="review-content">${review.content}</p>
-                    <div class="review-helpful">
-                        <span>👍</span>
-                        <span>${review.helpful} people found this helpful</span>
-                    </div>
-                </div>
-            `).join('');
-            
-            renderPagination();
-        }
-
-        function renderPagination() {
-            const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
-            const pagination = document.getElementById('pagination');
-            
-            let paginationHTML = `
-                <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
-                    Previous
-                </button>
-            `;
-            
-            for (let i = 1; i <= totalPages; i++) {
-                paginationHTML += `
-                    <button onclick="changePage(${i})" class="${i === currentPage ? 'active' : ''}">
-                        ${i}
-                    </button>
-                `;
-            }
-            
-            paginationHTML += `
-                <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
-                    Next
-                </button>
-            `;
-            
-            pagination.innerHTML = paginationHTML;
-        }
-
-        function changePage(page) {
-            const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
-            if (page < 1 || page > totalPages) return;
-            
-            currentPage = page;
-            renderReviews();
-            
-            // Scroll to reviews section
-            document.querySelector('.reviews-section').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // FAQ functionality
+        // FAQ Toggle
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
             const isOpen = answer.classList.contains('open');
             
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer').forEach(a => {
-                a.classList.remove('open');
-            });
-            document.querySelectorAll('.faq-question').forEach(q => {
-                q.classList.remove('active');
-            });
+            // Close all FAQs
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
             
-            // Toggle current FAQ
+            // Open clicked FAQ if it was closed
             if (!isOpen) {
                 answer.classList.add('open');
                 button.classList.add('active');
             }
         }
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animate number counter on scroll
-        let animated = false;
-        function animateCounter() {
-            if (animated) return;
-            
-            const numberElement = document.querySelector('.trusted-section .number');
-            if (!numberElement) return;
-            
-            const rect = numberElement.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                animated = true;
-                let current = 0;
-                const target = 100125;
-                const increment = target / 100;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        numberElement.textContent = target.toLocaleString() + '+ bottles sold,';
-                        clearInterval(timer);
-                    } else {
-                        numberElement.textContent = Math.floor(current).toLocaleString() + '+ bottles sold,';
-                    }
-                }, 20);
+        // Reviews Data
+        const reviews = [
+            {
+                name: "Sarah Mitchell",
+                date: "2 days ago",
+                rating: 5,
+                title: "Amazing Results!",
+                text: "I've been taking Cardiovita for 3 months now and the difference is incredible. My energy levels are through the roof!",
+                verified: true
+            },
+            {
+                name: "Michael Thompson",
+                date: "1 week ago",
+                rating: 5,
+                title: "Highly Recommend",
+                text: "My doctor is impressed with my latest test results. This product really works!",
+                verified: true
+            },
+            {
+                name: "Jennifer Davis",
+                date: "2 weeks ago",
+                rating: 5,
+                title: "Life Changing",
+                text: "I feel 10 years younger! My circulation has improved dramatically.",
+                verified: true
+            },
+            {
+                name: "Robert Wilson",
+                date: "3 weeks ago",
+                rating: 4,
+                title: "Good Product",
+                text: "Noticed improvements after the first month. Will continue taking it.",
+                verified: true
+            },
+            {
+                name: "Lisa Anderson",
+                date: "1 month ago",
+                rating: 5,
+                title: "Worth Every Penny",
+                text: "The best investment I've made in my health. Feel so much better!",
+                verified: true
+            },
+            {
+                name: "David Martinez",
+                date: "1 month ago",
+                rating: 5,
+                title: "Excellent Quality",
+                text: "You can tell this is a premium product. Results speak for themselves.",
+                verified: true
             }
+        ];
+
+        // Populate Reviews
+        function populateReviews() {
+            const reviewsGrid = document.getElementById('reviews-grid');
+            if (!reviewsGrid) return;
+            
+            reviewsGrid.innerHTML = reviews.slice(0, 3).map(review => `
+                <div class="review-card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                        <div>
+                            <h4 style="font-weight: 600;">${review.name}</h4>
+                            <p style="color: #666; font-size: 12px;">${review.date}</p>
+                        </div>
+                        ${review.verified ? '<span style="background: #dcfce7; color: #16a34a; font-size: 12px; padding: 4px 8px; border-radius: 4px;">✓ Verified</span>' : ''}
+                    </div>
+                    <div style="color: #FFD700; margin-bottom: 8px;">${'⭐'.repeat(review.rating)}</div>
+                    <p style="font-weight: 600; margin-bottom: 8px;">${review.title}</p>
+                    <p style="color: #666; line-height: 1.6;">${review.text}</p>
+                </div>
+            `).join('');
         }
 
-        window.addEventListener('scroll', animateCounter);
-        animateCounter(); // Check on load
-
-        // Initialize reviews
-        renderReviews();
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            populateReviews();
+            // Set initial package selection
+            selectPackage(2);
+        });
     </script>
 </body>
 </html>
