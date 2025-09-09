@@ -14,6 +14,7 @@ interface PackageOption {
   savings: number;
   freeShipping: boolean;
   isPopular?: boolean;
+  supply?: string;
 }
 
 const OrderSection = () => {
@@ -29,7 +30,8 @@ const OrderSection = () => {
       price: 158,
       perBottle: 79,
       savings: 0,
-      freeShipping: true
+      freeShipping: true,
+      supply: "60 Day Supply"
     },
     {
       id: "6",
@@ -41,7 +43,8 @@ const OrderSection = () => {
       perBottle: 49,
       savings: 180,
       freeShipping: true,
-      isPopular: true
+      isPopular: true,
+      supply: "180 Day Supply"
     },
     {
       id: "3",
@@ -52,7 +55,8 @@ const OrderSection = () => {
       price: 207,
       perBottle: 69,
       savings: 72,
-      freeShipping: true
+      freeShipping: true,
+      supply: "90 Day Supply"
     }
   ];
 
@@ -127,6 +131,11 @@ const OrderSection = () => {
 
               {/* Price Display */}
               <div className="text-center space-y-2 mb-6">
+                {currentPackage.supply && (
+                  <p className="text-sm font-semibold text-teal-600 uppercase">
+                    {currentPackage.supply}
+                  </p>
+                )}
                 <p className="text-sm text-gray-600">
                   Regular Price: <span className="line-through">${currentPackage.regularPrice}</span>
                 </p>
