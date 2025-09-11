@@ -137,9 +137,6 @@ const OrderSection = () => {
                     {currentPackage.supply}
                   </Badge>
                 )}
-                <p className="text-sm text-gray-600">
-                  Regular Price: <span className="line-through">${currentPackage.regularPrice}</span>
-                </p>
                 {currentPackage.savings > 0 && (
                   <p className="text-base sm:text-lg font-bold text-red-600">
                     YOU SAVE: ${currentPackage.savings.toFixed(1)}
@@ -188,8 +185,18 @@ const OrderSection = () => {
                 </Button>
               </a>
 
+              {/* Regular Price and Total */}
+              <div className="flex justify-between items-center mt-4 mb-2 text-sm">
+                <p className="text-gray-600">
+                  Regular Price: <span className="line-through">${currentPackage.regularPrice}</span>
+                </p>
+                <p className="font-bold text-teal-600">
+                  Total: ${currentPackage.price}
+                </p>
+              </div>
+
               {/* Reviews and Stock */}
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-2 mt-4">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
