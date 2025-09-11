@@ -139,7 +139,7 @@ const OrderSection = () => {
                 )}
                 {currentPackage.savings > 0 && (
                   <p className="text-base sm:text-lg font-bold text-red-600">
-                    YOU SAVE: ${currentPackage.savings.toFixed(1)}
+                    YOU SAVE: ${currentPackage.savings}
                   </p>
                 )}
                 <p className="text-xl sm:text-2xl font-bold text-teal-600">
