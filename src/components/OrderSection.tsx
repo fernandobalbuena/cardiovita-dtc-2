@@ -143,7 +143,7 @@ const OrderSection = () => {
                   </p>
                 )}
                 <p className="text-xl sm:text-2xl font-bold text-teal-600">
-                  ${currentPackage.perBottle.toFixed(1)} Per Bottle
+                  ${currentPackage.perBottle} Per Bottle
                 </p>
               </div>
 
