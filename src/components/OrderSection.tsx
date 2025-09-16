@@ -170,9 +170,9 @@ const OrderSection = () => {
               {/* Buy Button */}
               <a 
                 href={
-                  currentPackage.id === "2" ? "https://ab.capillex.shop/click/1" :
-                  currentPackage.id === "3" ? "https://ab.capillex.shop/click/2" :
-                  "https://ab.capillex.shop/click/3"
+                  currentPackage.id === "2" ? "https://pay.good4health.online/checkout/179166972:1" :
+                  currentPackage.id === "3" ? "https://pay.good4health.online/checkout/179166962:1" :
+                  "https://pay.good4health.online/checkout/179166963:1"
                 }
                 className="block"
               >
