@@ -68,7 +68,7 @@ const OrderSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 px-4">
-          Limited Time Offer on Cardiovita
+          Limited Time Offer on Dominus
         </h1>
 
         {/* 3 Boxes Layout - Desktop: side by side, Mobile: stacked */}
@@ -221,26 +221,26 @@ const OrderSection = () => {
                 <div className="flex items-center justify-center h-[200px]">
                   {currentPackage.id === "2" ? (
                     <img 
-                      src="/lovable-uploads/978a2a68-1aed-4848-91b1-7185910a849b.png"
-                      alt="2 bottles of Cardiovita"
+                      src="https://thumbor.cartpanda.com/aqdXsAu5M4KRHZ4DoBjifVkA-t4=/800x0/https://assets.mycartpanda.com/static/products_images/b0/19/b8/1758038794.png"
+                      alt="2 bottles of Dominus"
                       className="h-full object-contain"
                     />
                   ) : currentPackage.id === "3" ? (
                     <img 
-                      src="/lovable-uploads/b2e2323f-5669-4dc7-839b-7e9e640a43c2.png"
-                      alt="3 bottles of Cardiovita"
+                      src="https://thumbor.cartpanda.com/63wo915A18dGlaCqSq4TA84TN0U=/800x0/https://assets.mycartpanda.com/static/products_images/ff/17/c7/1758038792.png"
+                      alt="3 bottles of Dominus"
                       className="h-full object-contain"
                     />
                   ) : currentPackage.id === "6" ? (
                     <img 
-                      src="/lovable-uploads/974f6048-6484-442a-954e-429f4b6ff4ea.png"
-                      alt="6 bottles of Cardiovita"
+                      src="https://thumbor.cartpanda.com/uHBuY4kifX31p-oUkUeiczUIhQc=/800x0/https://assets.mycartpanda.com/static/products_images/bf/6b/61/1758038798.png"
+                      alt="6 bottles of Dominus"
                       className="h-full object-contain"
                     />
                   ) : (
                     <img 
                       src={`/bottle-${currentPackage.bottles}.png`}
-                      alt={`${currentPackage.bottles} bottles of Cardiovita`}
+                      alt={`${currentPackage.bottles} bottles of Dominus`}
                       className="h-full object-contain"
                     />
                   )}
@@ -249,7 +249,7 @@ const OrderSection = () => {
                 {/* Product Description */}
                 <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                   <p className="text-sm text-gray-700 font-medium">
-                    {currentPackage.bottles} {currentPackage.bottles === 1 ? 'Bottle' : 'Bottles'} of Cardiovita
+                    {currentPackage.bottles} {currentPackage.bottles === 1 ? 'Bottle' : 'Bottles'} of Dominus
                   </p>
                   {currentPackage.id === "6" && (
                     <p className="text-xs text-teal-600 mt-2">
@@ -275,7 +275,7 @@ const OrderSection = () => {
                 />
               </div>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                You have <strong>365 days to try Cardiovita</strong> and see the results for yourself risk-free. 
+                You have <strong>365 days to try Dominus</strong> and see the results for yourself risk-free. 
                 If you are not 100% satisfied — simply contact us and we will gladly refund your money.
               </p>
             </div>
@@ -285,7 +285,7 @@ const OrderSection = () => {
 
         {/* Trust Text */}
         <p className="text-center mt-6 sm:mt-8 text-gray-600 px-4 text-sm sm:text-base">
-          Trusted by many, Cardiovita contributes to our total of 
+          Trusted by many, Dominus contributes to our total of 
           <strong className="text-teal-600"> 7,000+ satisfied customers</strong>
         </p>
       </div>

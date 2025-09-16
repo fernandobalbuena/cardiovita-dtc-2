@@ -8,16 +8,16 @@ import {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "How does Cardiovita work?",
-      answer: "Cardiovita works by combining powerful natural ingredients that help support cardiovascular health, improve blood circulation, and support your body's natural cardiovascular processes. The formula targets the root causes of cardiovascular issues to provide comprehensive support."
+      question: "How does Dominus work?",
+      answer: "Dominus works by combining powerful natural ingredients that help support cardiovascular health, improve blood circulation, and support your body's natural cardiovascular processes. The formula targets the root causes of cardiovascular issues to provide comprehensive support."
     },
     {
       question: "How long before I see results?",
-      answer: "Most customers report noticeable improvements within 2-3 weeks of consistent use. However, for optimal results, we recommend taking Cardiovita for at least 3 months to allow your body to fully benefit from the formula."
+      answer: "Most customers report noticeable improvements within 2-3 weeks of consistent use. However, for optimal results, we recommend taking Dominus for at least 3 months to allow your body to fully benefit from the formula."
     },
     {
-      question: "Is Cardiovita safe?",
-      answer: "Yes! Cardiovita is manufactured in an FDA-registered, GMP-certified facility in the USA. All ingredients are natural, non-GMO, and thoroughly tested for purity and potency. However, we always recommend consulting with your healthcare provider before starting any new supplement."
+      question: "Is Dominus safe?",
+      answer: "Yes! Dominus is manufactured in an FDA-registered, GMP-certified facility in the USA. All ingredients are natural, non-GMO, and thoroughly tested for purity and potency. However, we always recommend consulting with your healthcare provider before starting any new supplement."
     },
     {
       question: "How many bottles should I order?",
@@ -25,19 +25,19 @@ const FAQSection = () => {
     },
     {
       question: "What if it doesn't work for me?",
-      answer: "We're confident you'll love Cardiovita, but if for any reason you're not satisfied, we offer a 180-day money-back guarantee. Simply return the product (even empty bottles) for a full refund, no questions asked."
+      answer: "We're confident you'll love Dominus, but if for any reason you're not satisfied, we offer a 180-day money-back guarantee. Simply return the product (even empty bottles) for a full refund, no questions asked."
     },
     {
-      question: "How do I take Cardiovita?",
+      question: "How do I take Dominus?",
       answer: "Take 2 capsules daily with a glass of water, preferably with a meal. For best results, take consistently at the same time each day and maintain proper hydration throughout the day."
     },
     {
       question: "Are there any side effects?",
-      answer: "Cardiovita is made with natural ingredients and is generally well-tolerated. Some users may experience mild adjustment symptoms initially as their body adjusts. These typically subside within a few days."
+      answer: "Dominus is made with natural ingredients and is generally well-tolerated. Some users may experience mild adjustment symptoms initially as their body adjusts. These typically subside within a few days."
     },
     {
       question: "Can I take this with other medications?",
-      answer: "While Cardiovita is natural and safe, we recommend consulting with your healthcare provider before taking it alongside other medications to ensure there are no interactions."
+      answer: "While Dominus is natural and safe, we recommend consulting with your healthcare provider before taking it alongside other medications to ensure there are no interactions."
     }
   ];
 
@@ -50,7 +50,7 @@ const FAQSection = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-muted-foreground">
-              Everything you need to know about Cardiovita
+              Everything you need to know about Dominus
             </p>
           </div>
 

@@ -39,7 +39,7 @@ const TrustedBySection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center text-white max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium mb-3">
-            Trusted by many. Cardiovita contributes to our total of
+            Trusted by many. Dominus contributes to our total of
           </h2>
           <p className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3" style={{ color: '#FFD700' }}>
             {bottleCount.toLocaleString()}+ bottles sold,

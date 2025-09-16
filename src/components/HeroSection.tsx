@@ -50,7 +50,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent blur-3xl"></div>
             <img 
               src="/lymph-product-hero.png" 
-              alt="Cardiovita Bottles"
+              alt="Dominus Bottles"
               className="relative z-10 w-full max-w-lg mx-auto animate-float"
             />
           </div>

@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       verified: true,
       beforeAfterImage: "/lovable-uploads/45d36862-85a4-4994-ae84-8ba740ea91a6.png",
       title: "Life-Changing Results!",
-      content: "I've struggled with swelling in my legs for years. After just 3 weeks of taking Cardiovita, the difference is incredible. My ankles are back to normal size and I feel so much lighter!",
+      content: "I've struggled with swelling in my legs for years. After just 3 weeks of taking Dominus, the difference is incredible. My ankles are back to normal size and I feel so much lighter!",
       date: "2 weeks ago"
     },
     {

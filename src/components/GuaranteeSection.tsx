@@ -16,7 +16,7 @@ const GuaranteeSection = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're so confident in Cardiovita that we offer an industry-leading 
+              We're so confident in Dominus that we offer an industry-leading 
               180-day money-back guarantee. If you're not completely satisfied with your results, 
               simply return the product for a full refund - no questions asked.
             </p>
